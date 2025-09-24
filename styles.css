@@ -22,13 +22,13 @@
 }
 
 .promo-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #ff6b35;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     background: rgba(255, 107, 53, 0.1);
-    padding: 6px 16px;
+    padding: 5px 14px;
     border-radius: 25px;
     border: 1px solid rgba(255, 107, 53, 0.3);
     display: inline-block;
@@ -40,11 +40,11 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(15, 20, 25, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     z-index: 1001;
-    padding: 8px 0;
+    padding: 6px 0;
     transition: all 0.3s ease;
 }
 
@@ -59,9 +59,40 @@
     }
 }
 
+@keyframes titleSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
 /* Ajuste do body para compensar o header fixo */
 body {
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 body {
@@ -176,13 +207,17 @@ body::before {
     font-weight: 800;
     margin-bottom: 24px;
     line-height: 1.1;
+    opacity: 0;
+    animation: titleSlideIn 1.2s ease-out 0.3s forwards;
 }
 
 .highlight {
-    background: linear-gradient(135deg, #ff6b35, #3b82f6);
+    background: linear-gradient(45deg, #ff6b35, #3b82f6, #8b5cf6, #ff6b35);
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
 }
 
 .hero-subtitle {
@@ -192,6 +227,8 @@ body::before {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.6s forwards;
 }
 
 .hero-description {
@@ -202,6 +239,8 @@ body::before {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.7;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.9s forwards;
 }
 
 .cta-button {
@@ -253,6 +292,19 @@ section {
     text-align: center;
     margin-bottom: 60px;
     color: #ffffff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.section-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
 }
 
 /* Seção Por que pagar? */
@@ -1201,17 +1253,17 @@ html {
 /* Responsividade Mobile */
 @media (max-width: 768px) {
     .sticky-header {
-        padding: 6px 0;
+        padding: 4px 0;
     }
     
     .promo-text {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         letter-spacing: 0.3px;
-        padding: 4px 12px;
+        padding: 3px 10px;
     }
     
     body {
-        padding-top: 42px;
+        padding-top: 35px;
     }
     
 
