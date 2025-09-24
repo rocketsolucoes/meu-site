@@ -40,7 +40,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, rgba(15, 20, 25, 0.95), rgba(26, 26, 46, 0.95));
+    background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
     border: none;
     z-index: 1001;
     padding: 6px 0;
