@@ -448,6 +448,13 @@ section {
     font-size: 1.3rem;
 }
 
+.price-period {
+    font-size: 1rem;
+    color: #9ca3af;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
 /* Benefício Secundário */
 .secondary-benefit {
     display: flex;
