@@ -6,17 +6,6 @@
 }
 
 /* Cabeçalho Fixo */
-.sticky-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
-    z-index: 1001;
-    padding: 8px 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
-}
 
 .header-content {
     display: flex;
@@ -38,18 +27,44 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    animation: pulseBanner 2s infinite;
+    animation: pulseBannerIntense 1.8s infinite;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes pulseBanner {
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    z-index: 1001;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+    animation: headerPulse 2.5s infinite;
+}
+
+@keyframes pulseBannerIntense {
     0%, 100% { 
         opacity: 1;
         transform: scale(1);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
     50% { 
-        opacity: 0.8;
-        transform: scale(1.02);
+        opacity: 0.85;
+        transform: scale(1.03);
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes headerPulse {
+    0%, 100% { 
+        box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        transform: translateY(0);
+    }
+    50% { 
+        box-shadow: 0 6px 30px rgba(255, 107, 53, 0.5);
+        transform: translateY(1px);
     }
 }
 
@@ -64,8 +79,25 @@ body {
     color: #ffffff;
     background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
+}
+
+/* Prevenção de área branca durante scroll rápido */
+html {
+    background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100%;
+}
+
+/* Scroll suave e prevenção de área branca */
+* {
+    scroll-behavior: smooth;
 }
 
 /* Efeito de fundo sutil */
@@ -76,6 +108,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
+    background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
+    z-index: -2;
     background-image: 
         radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
@@ -969,7 +1003,7 @@ html {
 /* Botão WhatsApp Flutuante */
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
+    bottom: 90px;
     right: 20px;
     z-index: 999;
     animation: pulse 2s infinite;
@@ -1186,6 +1220,11 @@ html {
     
     body {
         padding-top: 38px;
+    }
+    
+    .whatsapp-float {
+        bottom: 100px;
+        right: 15px;
     }
     
     .whatsapp-btn span {
