@@ -23,17 +23,17 @@
 
 .promo-text {
     font-size: 0.85rem;
-    color: #ffffff;
+    color: #ff6b35;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background: #ff6b35;
+    background: rgba(255, 107, 53, 0.15);
     padding: 6px 16px;
     border-radius: 30px;
-    border: 1px solid #f7931e;
+    border: 1px solid #ff6b35;
     display: inline-block;
     animation: promoGlow 2s infinite;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .sticky-header {
@@ -50,11 +50,13 @@
 
 @keyframes promoGlow {
     0%, 100% { 
-        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        border-color: #ff6b35;
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
         transform: scale(1);
     }
     50% { 
-        box-shadow: 0 6px 25px rgba(255, 107, 53, 0.6);
+        border-color: #f7931e;
+        box-shadow: 0 6px 25px rgba(255, 107, 53, 0.5);
         transform: scale(1.02);
     }
 }
@@ -336,10 +338,18 @@ section {
 /* Seção Por que pagar? */
 .why-pay {
     background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
     margin-top: -80px;
     padding-top: 120px;
     position: relative;
     z-index: 5;
+}
+
+/* Fallback para navegadores que não suportam backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+    .why-pay {
+        background: rgba(15, 20, 25, 0.85);
+    }
 }
 
 .features-grid {
