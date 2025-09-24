@@ -77,10 +77,11 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #ffffff;
-    background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
+    background-color: #0f1419;
+    background-image: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -88,11 +89,25 @@ body {
 
 /* Prevenção de área branca durante scroll rápido */
 html {
-    background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
+    background: #0f1419;
+    background-image: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     min-height: 100%;
+    height: 100%;
+}
+
+html::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
+    z-index: -10;
+    pointer-events: none;
 }
 
 /* Scroll suave e prevenção de área branca */
@@ -1003,7 +1018,7 @@ html {
 /* Botão WhatsApp Flutuante */
 .whatsapp-float {
     position: fixed;
-    bottom: 90px;
+    bottom: 20px;
     right: 20px;
     z-index: 999;
     animation: pulse 2s infinite;
@@ -1054,6 +1069,8 @@ html {
     text-align: center;
     border-radius: 20px;
     border: 1px solid rgba(255, 107, 53, 0.2);
+    position: relative;
+    z-index: 10;
 }
 
 .cta-content-center h3 {
@@ -1222,10 +1239,7 @@ html {
         padding-top: 38px;
     }
     
-    .whatsapp-float {
-        bottom: 100px;
-        right: 15px;
-    }
+
     
     .whatsapp-btn span {
         display: none;
