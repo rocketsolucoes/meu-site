@@ -22,18 +22,17 @@
 }
 
 .promo-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #ff6b35;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background: rgba(255, 107, 53, 0.15);
-    padding: 6px 16px;
-    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 4px 12px;
+    border-radius: 25px;
     border: 1px solid #ff6b35;
     display: inline-block;
     animation: promoGlow 2s infinite;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .sticky-header {
@@ -41,23 +40,21 @@
     top: 0;
     left: 0;
     right: 0;
-    background: transparent;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.95), rgba(26, 26, 46, 0.95));
     border: none;
     z-index: 1001;
-    padding: 8px 0;
+    padding: 6px 0;
     transition: all 0.3s ease;
 }
 
 @keyframes promoGlow {
     0%, 100% { 
         border-color: #ff6b35;
-        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
         transform: scale(1);
     }
     50% { 
         border-color: #f7931e;
-        box-shadow: 0 6px 25px rgba(255, 107, 53, 0.5);
-        transform: scale(1.02);
+        transform: scale(1.01);
     }
 }
 
@@ -1296,9 +1293,9 @@ html {
     }
     
     .promo-text {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         letter-spacing: 0.3px;
-        padding: 4px 12px;
+        padding: 3px 10px;
     }
     
     body {
