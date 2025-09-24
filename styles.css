@@ -333,10 +333,37 @@ section {
     box-shadow: 0 2px 15px rgba(255, 107, 53, 0.4);
 }
 
+/* Transição com Ondas */
+.wave-transition {
+    position: relative;
+    height: 120px;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+    animation: waveAnimation 8s ease-in-out infinite;
+}
+
+@keyframes waveAnimation {
+    0%, 100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+}
+
 /* Seção Por que pagar? */
 .why-pay {
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(10px);
+    margin-top: -1px;
 }
 
 .features-grid {
@@ -1292,8 +1319,14 @@ html {
         padding-top: 40px;
     }
     
-
+    .wave-transition {
+        height: 80px;
+    }
     
+    .wave-svg {
+        height: 80px;
+    }
+
     .whatsapp-btn span {
         display: none;
     }
