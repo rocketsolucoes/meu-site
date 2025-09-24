@@ -1557,6 +1557,55 @@ html {
     vertical-align: middle;
 }
 
+/* Depoimentos */
+.testimonials {
+    padding: 80px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.rating {
+    color: #ff6b35;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.author-avatar {
+    font-size: 1.5rem;
+}
+
+.author span {
+    color: #fff;
+    font-weight: 600;
+}
+
 /* Como Funciona */
 .how-it-works {
     padding: 80px 0;
@@ -1613,6 +1662,11 @@ html {
     }
     
 
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
     
     .step {
         padding: 20px 15px;
