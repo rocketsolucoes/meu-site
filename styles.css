@@ -1483,6 +1483,25 @@ html {
 }
 
 
+/* Animação do título destacado */
+.highlight-animated {
+    background: linear-gradient(45deg, #ff6b35, #f7931e, #ff6b35);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
 /* Trust Badges */
 .trust-badges {
     display: flex;
@@ -1504,14 +1523,15 @@ html {
 /* Pricing Cards Melhorados */
 .savings-badge {
     position: absolute;
-    top: -10px;
-    right: 20px;
+    top: 45px;
+    right: 15px;
     background: #ff6b35;
     color: white;
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
     font-weight: 600;
+    z-index: 10;
 }
 
 .original-price {
@@ -1528,6 +1548,13 @@ html {
     gap: 15px;
     font-size: 0.85rem;
     color: #999;
+}
+
+.payment-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 /* Como Funciona */
@@ -1567,54 +1594,7 @@ html {
     font-size: 1rem;
 }
 
-/* Depoimentos */
-.testimonials {
-    padding: 80px 0;
-}
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.testimonial-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-}
-
-.rating {
-    color: #ff6b35;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.testimonial-card p {
-    color: #ccc;
-    font-style: italic;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.author {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.author-avatar {
-    font-size: 1.5rem;
-}
-
-.author span {
-    color: #fff;
-    font-weight: 600;
-}
 
 /* Responsividade para novas seções */
 @media (max-width: 768px) {
@@ -1632,10 +1612,7 @@ html {
         gap: 30px;
     }
     
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+
     
     .step {
         padding: 20px 15px;
