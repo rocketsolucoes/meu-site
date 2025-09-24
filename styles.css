@@ -1286,44 +1286,7 @@ html {
     animation: pulse 2s infinite;
 }
 
-/* Botão CTA Fixo Mobile */
-.mobile-cta-fixed {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    padding: 12px 16px;
-    background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-.mobile-cta-button {
-    display: block;
-    width: 100%;
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
-    color: white;
-    padding: 16px 20px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
-    transition: all 0.3s ease;
-    min-height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mobile-cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5);
-}
 
 /* Responsividade Mobile */
 @media (max-width: 768px) {
@@ -1339,11 +1302,6 @@ html {
     
     body {
         padding-top: 40px;
-        padding-bottom: 80px;
-    }
-    
-    .mobile-cta-fixed {
-        display: block;
     }
     
     .hero {
