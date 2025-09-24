@@ -22,13 +22,17 @@
 }
 
 .promo-text {
-    font-size: 0.95rem;
-    color: white;
-    font-weight: 700;
+    font-size: 0.9rem;
+    color: #ff6b35;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    animation: pulseBannerIntense 1.8s infinite;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 107, 53, 0.1);
+    padding: 6px 16px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    display: inline-block;
+    animation: promoGlow 2s infinite;
 }
 
 .sticky-header {
@@ -36,41 +40,28 @@
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1001;
     padding: 8px 0;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
-    animation: headerPulse 2.5s infinite;
 }
 
-@keyframes pulseBannerIntense {
+@keyframes promoGlow {
     0%, 100% { 
-        opacity: 1;
-        transform: scale(1);
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 107, 53, 0.3);
+        box-shadow: 0 0 0 rgba(255, 107, 53, 0.4);
     }
     50% { 
-        opacity: 0.85;
-        transform: scale(1.03);
-        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-    }
-}
-
-@keyframes headerPulse {
-    0%, 100% { 
-        box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
-        transform: translateY(0);
-    }
-    50% { 
-        box-shadow: 0 6px 30px rgba(255, 107, 53, 0.5);
-        transform: translateY(1px);
+        border-color: rgba(255, 107, 53, 0.6);
+        box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
     }
 }
 
 /* Ajuste do body para compensar o header fixo */
 body {
-    padding-top: 45px;
+    padding-top: 50px;
 }
 
 body {
@@ -1216,16 +1207,14 @@ html {
     .promo-text {
         font-size: 0.8rem;
         letter-spacing: 0.3px;
+        padding: 4px 12px;
     }
     
     body {
-        padding-top: 38px;
+        padding-top: 42px;
     }
     
-    .whatsapp-float {
-        bottom: 100px;
-        right: 15px;
-    }
+
     
     .whatsapp-btn span {
         display: none;
