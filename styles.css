@@ -23,16 +23,17 @@
 
 .promo-text {
     font-size: 0.85rem;
-    color: #ff6b35;
+    color: #ffffff;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    background: rgba(139, 69, 19, 0.3);
+    background: #ff6b35;
     padding: 6px 16px;
     border-radius: 30px;
-    border: 1px solid rgba(255, 107, 53, 0.4);
+    border: 1px solid #f7931e;
     display: inline-block;
     animation: promoGlow 2s infinite;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
 }
 
 .sticky-header {
@@ -40,7 +41,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: transparent;
     border: none;
     z-index: 1001;
     padding: 8px 0;
@@ -49,12 +50,12 @@
 
 @keyframes promoGlow {
     0%, 100% { 
-        border-color: rgba(255, 107, 53, 0.3);
-        box-shadow: 0 0 0 rgba(255, 107, 53, 0.4);
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        transform: scale(1);
     }
     50% { 
-        border-color: rgba(255, 107, 53, 0.6);
-        box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
+        box-shadow: 0 6px 25px rgba(255, 107, 53, 0.6);
+        transform: scale(1.02);
     }
 }
 
@@ -335,7 +336,10 @@ section {
 /* Seção Por que pagar? */
 .why-pay {
     background: rgba(255, 255, 255, 0.02);
-    margin-top: 60px;
+    margin-top: -80px;
+    padding-top: 120px;
+    position: relative;
+    z-index: 5;
 }
 
 .features-grid {
@@ -1292,11 +1296,12 @@ html {
     }
     
     .hero {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
     
     .why-pay {
-        margin-top: 40px;
+        margin-top: -60px;
+        padding-top: 100px;
     }
 
     .whatsapp-btn span {
