@@ -1731,11 +1731,13 @@ html {
     text-decoration: line-through;
     font-weight: 400;
     opacity: 0.7;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .current-price {
-    display: block;
-    margin-top: 5px;
+    display: inline-block;
+    margin-top: 0;
 }
 
 /* Responsividade para comparador de preços */
