@@ -1654,3 +1654,68 @@ html {
         font-size: 2.5rem;
     }
 }
+
+
+/* Estilos para novos cards de preços */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.canva-note {
+    font-size: 0.85rem !important;
+    color: #a0a0a0 !important;
+    font-style: italic;
+}
+
+.exclusivity-badge {
+    background: rgba(255, 107, 53, 0.1);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 10px 0 15px 0;
+    text-align: center;
+}
+
+.exclusivity-badge em {
+    color: #ff6b35;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.premium-button {
+    background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.premium-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+/* Responsividade para novos cards */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 100%;
+    }
+    
+    .canva-note {
+        font-size: 0.8rem !important;
+        line-height: 1.4;
+    }
+    
+    .exclusivity-badge {
+        padding: 6px 10px;
+        margin: 8px 0 12px 0;
+    }
+    
+    .exclusivity-badge em {
+        font-size: 0.85rem;
+    }
+}
