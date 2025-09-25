@@ -1719,3 +1719,28 @@ html {
         font-size: 0.85rem;
     }
 }
+
+/* Estilos para comparador de preços */
+.price-comparison {
+    margin-bottom: 5px;
+}
+
+.original-price {
+    color: #888;
+    font-size: 1.1rem;
+    text-decoration: line-through;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.current-price {
+    display: block;
+    margin-top: 5px;
+}
+
+/* Responsividade para comparador de preços */
+@media (max-width: 768px) {
+    .original-price {
+        font-size: 1rem;
+    }
+}
