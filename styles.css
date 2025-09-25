@@ -1082,7 +1082,7 @@ html {
 /* Botão WhatsApp Flutuante */
 .whatsapp-float {
     position: fixed;
-    bottom: 90px;
+    bottom: 20px;
     right: 20px;
     z-index: 999;
     animation: pulse 2s infinite;
