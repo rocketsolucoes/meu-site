@@ -1746,3 +1746,87 @@ html {
         font-size: 1rem;
     }
 }
+
+/* Seção Garantias e Segurança */
+.security-guarantees {
+    padding: 80px 0;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.security-item {
+    text-align: center;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.security-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 107, 53, 0.4);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.15);
+    background: rgba(255, 107, 53, 0.08);
+}
+
+.security-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.security-item h3 {
+    color: #ff6b35;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.security-item p {
+    color: #e5e7eb;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Responsividade para seção de garantias */
+@media (max-width: 768px) {
+    .security-guarantees {
+        padding: 60px 0;
+    }
+    
+    .security-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 40px;
+    }
+    
+    .security-item {
+        padding: 30px 20px;
+    }
+    
+    .security-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .security-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .security-item p {
+        font-size: 0.95rem;
+    }
+}
