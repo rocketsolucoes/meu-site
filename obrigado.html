@@ -67,13 +67,13 @@
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 2rem 1rem;
+            padding: 1rem;
         }
         
         .thank-you-card {
             background: white;
             border-radius: 20px;
-            padding: 3rem 2rem;
+            padding: 2.5rem 2rem;
             max-width: 600px;
             width: 100%;
             text-align: center;
@@ -244,22 +244,92 @@
         }
         
         @media (max-width: 768px) {
+            .thank-you-container {
+                padding: 0.5rem;
+                align-items: flex-start;
+                padding-top: 2rem;
+            }
+            
             .thank-you-card {
-                padding: 2rem 1.5rem;
-                margin: 1rem;
+                padding: 2rem 1.2rem;
+                margin: 0;
+                border-radius: 15px;
+                max-width: none;
+                width: calc(100% - 1rem);
+            }
+            
+            .thank-you-title {
+                font-size: 2.2rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .thank-you-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .next-steps {
+                padding: 1.5rem 1.2rem;
+                margin: 1.5rem 0;
+            }
+            
+            .next-steps h3 {
+                font-size: 1.2rem;
+            }
+            
+            .steps-list {
+                font-size: 0.95rem;
+            }
+            
+            .phone-number {
+                padding: 1rem 1.2rem;
+                font-size: 1.05rem;
+                margin: 1.2rem 0;
+            }
+            
+            .whatsapp-cta {
+                padding: 1.1rem 1.8rem;
+                font-size: 1rem;
+                margin: 1.2rem 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            
+            .guarantee-badge {
+                padding: 0.9rem 1.2rem;
+                font-size: 0.9rem;
+                margin: 1.5rem 0 1rem;
+            }
+            
+            .footer-note {
+                font-size: 0.85rem;
+                margin-top: 1.5rem;
+                padding-top: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .thank-you-container {
+                padding: 0.3rem;
+                padding-top: 1.5rem;
+            }
+            
+            .thank-you-card {
+                padding: 1.8rem 1rem;
+                width: calc(100% - 0.6rem);
             }
             
             .thank-you-title {
                 font-size: 2rem;
             }
             
-            .thank-you-subtitle {
-                font-size: 1.1rem;
+            .next-steps {
+                padding: 1.2rem 1rem;
             }
             
             .whatsapp-cta {
-                padding: 1rem 2rem;
-                font-size: 1rem;
+                padding: 1rem 1.5rem;
+                font-size: 0.95rem;
             }
         }
     </style>
