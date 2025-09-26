@@ -235,37 +235,64 @@
         .whatsapp-cta {
             background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
-            padding: 1.2rem 2.5rem;
+            padding: 1.4rem 3rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 0.8rem;
             transition: all 0.3s ease;
-            margin: 1.5rem 0;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-            animation: whatsappPulse 4s ease-in-out infinite;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            animation: whatsappMegaPulse 2s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
         }
         
-        @keyframes whatsappPulse {
+        .whatsapp-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes whatsappMegaPulse {
             0%, 100% {
                 transform: scale(1);
-                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+                box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.7);
             }
             50% {
-                transform: scale(1.02);
-                box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+                transform: scale(1.05);
+                box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6), 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+        }
+        
+        @keyframes shimmer {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
             }
         }
         
         .whatsapp-cta:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+            transform: translateY(-3px) scale(1.08);
+            box-shadow: 0 20px 50px rgba(37, 211, 102, 0.7);
             color: white;
             animation: none;
+            background: linear-gradient(135deg, #2EE86C, #25D366);
+        }
+        
+        .whatsapp-cta:active {
+            transform: translateY(-1px) scale(1.03);
         }
         
         .whatsapp-icon {
@@ -273,45 +300,9 @@
             height: 24px;
         }
         
-        .phone-number {
-            color: #2c3e50;
-            font-family: 'Courier New', monospace;
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin: 1.5rem 0;
-            animation: phoneGlow 2s ease-in-out infinite alternate;
-        }
+
         
-        @keyframes phoneGlow {
-            from {
-                color: #2c3e50;
-                text-shadow: 0 0 5px rgba(37, 211, 102, 0.3);
-            }
-            to {
-                color: #25D366;
-                text-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
-            }
-        }
-        
-        .guarantee-text {
-            color: #ff6600;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin: 2rem 0 1rem;
-            animation: guaranteeBounce 3s ease-in-out infinite;
-        }
-        
-        @keyframes guaranteeBounce {
-            0%, 100% {
-                transform: translateY(0);
-                color: #ff6600;
-            }
-            50% {
-                transform: translateY(-3px);
-                color: #ff8533;
-                text-shadow: 0 3px 10px rgba(255, 102, 0, 0.3);
-            }
-        }
+
         
         .footer-note {
             color: #7f8c8d;
@@ -359,22 +350,12 @@
                 font-size: 0.95rem;
             }
             
-            .phone-number {
-                font-size: 1.2rem;
-                margin: 1.2rem 0;
-            }
-            
             .whatsapp-cta {
-                padding: 1.1rem 1.8rem;
-                font-size: 1rem;
-                margin: 1.2rem 0;
+                padding: 1.2rem 2rem;
+                font-size: 1.1rem;
+                margin: 1.5rem 0;
                 width: 100%;
                 box-sizing: border-box;
-            }
-            
-            .guarantee-text {
-                font-size: 1rem;
-                margin: 1.5rem 0 1rem;
             }
             
             .footer-note {
@@ -444,10 +425,7 @@
                 </ul>
             </div>
             
-            <div class="phone-number">
-                📱 (31) 9 9104-4900
-            </div>
-            
+
             <a href="https://wa.me/5531991044900?text=Olá! Acabei de realizar a compra do ChatGPT Plus com GPT-5. Gostaria de receber meus dados de acesso, por favor." 
                target="_blank" 
                class="whatsapp-cta">
@@ -457,12 +435,10 @@
                 Falar no WhatsApp Agora
             </a>
             
-            <div class="guarantee-text">
-                🛡️ Garantia de 7 dias ou seu dinheiro de volta
-            </div>
-            
+
             <div class="footer-note">
-               <p>Obrigado por escolher a <strong>Rocket Soluções</strong>! 🚀</p>
+                <p><strong>Importante:</strong> Nosso suporte funciona de segunda a sexta, das 9h às 18h. Mensagens enviadas fora deste horário serão respondidas no próximo dia útil.</p>
+                <p>Obrigado por escolher a <strong>Rocket Soluções</strong>! 🚀</p>
             </div>
         </div>
     </div>
