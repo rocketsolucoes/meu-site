@@ -73,7 +73,7 @@
         .thank-you-card {
             background: white;
             border-radius: 20px;
-            padding: 2.5rem 2rem;
+            padding: 1.5rem 2rem;
             max-width: 600px;
             width: 100%;
             text-align: center;
@@ -93,14 +93,14 @@
         }
         
         .success-icon {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, #4CAF50, #45a049);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 2rem;
+            margin: 0 auto 1rem;
             animation: pulse 2s infinite;
         }
         
@@ -120,16 +120,16 @@
         }
         
         .success-icon svg {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             color: white;
         }
         
         .thank-you-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             background: linear-gradient(135deg, #667eea, #764ba2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -149,24 +149,24 @@
         }
         
         .thank-you-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #7f8c8d;
-            margin-bottom: 2rem;
-            line-height: 1.6;
+            margin-bottom: 1rem;
+            line-height: 1.5;
         }
         
         .next-steps {
             background: #f8f9fa;
             border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
+            padding: 1.2rem;
+            margin: 1rem 0;
             border-left: 5px solid #ff6600;
         }
         
         .next-steps h3 {
             color: #2c3e50;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -181,11 +181,11 @@
         .steps-list {
             text-align: left;
             color: #555;
-            line-height: 1.8;
+            line-height: 1.6;
         }
         
         .steps-list li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
             padding-left: 1rem;
             position: relative;
             opacity: 0;
@@ -235,17 +235,17 @@
         .whatsapp-cta {
             background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
-            padding: 1.4rem 3rem;
+            padding: 1.2rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 0.8rem;
             transition: all 0.3s ease;
-            margin: 2rem 0;
+            margin: 1rem 0;
             box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
             animation: whatsappMegaPulse 2s ease-in-out infinite;
             position: relative;
@@ -306,87 +306,124 @@
         
         .footer-note {
             color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-top: 2rem;
-            padding-top: 2rem;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
             border-top: 1px solid #ecf0f1;
         }
         
         @media (max-width: 768px) {
             .thank-you-container {
-                padding: 0.5rem;
-                align-items: flex-start;
-                padding-top: 2rem;
+                padding: 0.3rem;
+                align-items: center;
+                padding-top: 0.5rem;
             }
             
             .thank-you-card {
-                padding: 2rem 1.2rem;
+                padding: 1rem 1rem;
                 margin: 0;
                 border-radius: 15px;
                 max-width: none;
-                width: calc(100% - 1rem);
+                width: calc(100% - 0.6rem);
+            }
+            
+            .success-icon {
+                width: 50px;
+                height: 50px;
+                margin: 0 auto 0.5rem;
+            }
+            
+            .success-icon svg {
+                width: 25px;
+                height: 25px;
             }
             
             .thank-you-title {
-                font-size: 2.2rem;
-                margin-bottom: 1.2rem;
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
             }
             
             .thank-you-subtitle {
-                font-size: 1.1rem;
-                margin-bottom: 1.5rem;
+                font-size: 1rem;
+                margin-bottom: 0.8rem;
             }
             
             .next-steps {
-                padding: 1.5rem 1.2rem;
-                margin: 1.5rem 0;
+                padding: 1rem;
+                margin: 0.8rem 0;
             }
             
             .next-steps h3 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+                margin-bottom: 0.6rem;
             }
             
             .steps-list {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+            
+            .steps-list li {
+                margin-bottom: 0.4rem;
             }
             
             .whatsapp-cta {
-                padding: 1.2rem 2rem;
-                font-size: 1.1rem;
-                margin: 1.5rem 0;
+                padding: 1rem 2rem;
+                font-size: 1rem;
+                margin: 0.8rem 0;
                 width: 100%;
                 box-sizing: border-box;
             }
             
             .footer-note {
-                font-size: 0.85rem;
-                margin-top: 1.5rem;
-                padding-top: 1.5rem;
+                font-size: 0.8rem;
+                margin-top: 0.8rem;
+                padding-top: 0.8rem;
             }
         }
         
         @media (max-width: 480px) {
             .thank-you-container {
-                padding: 0.3rem;
-                padding-top: 1.5rem;
+                padding: 0.2rem;
+                padding-top: 0.3rem;
             }
             
             .thank-you-card {
-                padding: 1.8rem 1rem;
-                width: calc(100% - 0.6rem);
+                padding: 0.8rem 0.8rem;
+                width: calc(100% - 0.4rem);
             }
             
             .thank-you-title {
-                font-size: 2rem;
+                font-size: 1.6rem;
+            }
+            
+            .thank-you-subtitle {
+                font-size: 0.95rem;
             }
             
             .next-steps {
-                padding: 1.2rem 1rem;
+                padding: 0.8rem;
+                margin: 0.6rem 0;
+            }
+            
+            .next-steps h3 {
+                font-size: 1rem;
+            }
+            
+            .steps-list {
+                font-size: 0.85rem;
             }
             
             .whatsapp-cta {
-                padding: 1rem 1.5rem;
+                padding: 0.9rem 1.5rem;
                 font-size: 0.95rem;
+                margin: 0.6rem 0;
+            }
+            
+            .footer-note {
+                font-size: 0.75rem;
+                margin-top: 0.6rem;
+                padding-top: 0.6rem;
             }
         }
     </style>
