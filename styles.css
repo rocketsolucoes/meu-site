@@ -2710,3 +2710,45 @@ body {
         margin-top: 18px !important;
     }
 }
+
+/* ===== RESTAURAR BADGE -23% NA TAB ANUAL ===== */
+
+/* Mostrar badge da tab novamente */
+.tab-badge {
+    display: inline-block !important;
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    color: white !important;
+    font-size: 0.75rem !important;
+    padding: 3px 8px !important;
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+    margin-left: 8px !important;
+    vertical-align: middle !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+}
+
+/* Badge na tab ativa */
+.tab-button.active .tab-badge {
+    background: rgba(255, 255, 255, 0.25) !important;
+    color: white !important;
+}
+
+/* Mobile: badge menor */
+@media (max-width: 768px) {
+    .tab-badge {
+        font-size: 0.65rem !important;
+        padding: 2px 6px !important;
+        margin-left: 5px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-badge {
+        font-size: 0.6rem !important;
+        padding: 2px 5px !important;
+        margin-left: 4px !important;
+    }
+}
