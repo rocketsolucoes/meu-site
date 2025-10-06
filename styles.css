@@ -2547,3 +2547,32 @@ body {
     background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #16213e 100%);
 }
 
+
+/* ===== CORREÇÃO URGENTE: Badge no Mobile ===== */
+
+/* Badge menor e melhor posicionado no mobile */
+@media (max-width: 768px) {
+    .plan-badge {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        margin: 0 auto 15px auto !important;
+        display: inline-block !important;
+        font-size: 0.75rem !important;
+        padding: 6px 16px !important;
+    }
+    
+    .plan-card-new {
+        padding-top: 25px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-badge {
+        font-size: 0.7rem !important;
+        padding: 5px 14px !important;
+        margin-bottom: 12px !important;
+    }
+}
+
