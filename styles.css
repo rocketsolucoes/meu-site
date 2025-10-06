@@ -2650,3 +2650,29 @@ body {
         padding: 5px 12px !important;
     }
 }
+
+
+/* ===== SOLUÇÃO FINAL: Esconder badge no mobile ===== */
+
+@media (max-width: 768px) {
+    .plan-badge {
+        display: none !important;
+    }
+    
+    .plan-card-new.featured {
+        padding-top: 30px !important;
+    }
+    
+    /* Destacar o card Premium de outra forma no mobile */
+    .plan-card-new.featured {
+        border: 3px solid #ff6b35 !important;
+        background: rgba(255, 107, 53, 0.12) !important;
+        box-shadow: 0 15px 50px rgba(255, 107, 53, 0.3) !important;
+    }
+    
+    .plan-card-new.featured .plan-name {
+        color: #ff6b35 !important;
+        font-size: 2rem !important;
+        font-weight: 800 !important;
+    }
+}
