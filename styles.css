@@ -2248,3 +2248,19 @@ html {
         font-size: 0.95rem !important;
     }
 }
+
+/* Garantia mais discreta após o CTA */
+.plan-guarantee {
+    background: transparent !important;
+    border: none !important;
+    padding: 10px 0 !important;
+    margin: 12px 0 0 0 !important;
+    font-size: 0.8rem !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    text-align: center !important;
+}
+
+.plan-guarantee strong {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500 !important;
+}
