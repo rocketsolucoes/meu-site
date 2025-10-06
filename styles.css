@@ -2576,3 +2576,77 @@ body {
     }
 }
 
+
+/* ===== CORREÇÃO DEFINITIVA: Badge Mobile ===== */
+
+/* Forçar badge para dentro do card no mobile */
+@media (max-width: 768px) {
+    .plan-card-new.featured {
+        padding-top: 50px !important;
+    }
+    
+    .plan-badge {
+        position: absolute !important;
+        top: 15px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin: 0 !important;
+        font-size: 0.7rem !important;
+        padding: 6px 14px !important;
+        z-index: 1 !important;
+    }
+    
+    .plan-name {
+        margin-top: 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-card-new.featured {
+        padding-top: 45px !important;
+    }
+    
+    .plan-badge {
+        top: 12px !important;
+        font-size: 0.65rem !important;
+        padding: 5px 12px !important;
+    }
+}
+
+
+
+/* ===== CORREÇÃO DEFINITIVA: Badge Mobile ===== */
+
+/* Forçar badge para dentro do card no mobile */
+@media (max-width: 768px) {
+    .plan-card-new.featured {
+        padding-top: 50px !important;
+    }
+    
+    .plan-badge {
+        position: absolute !important;
+        top: 15px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin: 0 !important;
+        font-size: 0.7rem !important;
+        padding: 6px 14px !important;
+        z-index: 1 !important;
+    }
+    
+    .plan-name {
+        margin-top: 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-card-new.featured {
+        padding-top: 45px !important;
+    }
+    
+    .plan-badge {
+        top: 12px !important;
+        font-size: 0.65rem !important;
+        padding: 5px 12px !important;
+    }
+}
