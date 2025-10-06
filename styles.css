@@ -2264,3 +2264,19 @@ html {
     color: rgba(255, 255, 255, 0.8) !important;
     font-weight: 500 !important;
 }
+
+/* Corrigir espaçamento da garantia */
+.plan-guarantee {
+    margin: 25px 0 0 0 !important;
+}
+
+/* Centralizar preços */
+.plan-pricing {
+    text-align: center !important;
+}
+
+.plan-price-main,
+.plan-price-period,
+.plan-savings {
+    text-align: center !important;
+}
