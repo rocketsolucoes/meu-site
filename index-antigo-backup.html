@@ -267,190 +267,61 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <h2 class="section-title">Escolha seu plano</h2>
-            
-            <!-- Tabs de Período -->
-            <div class="pricing-tabs">
-                <button class="tab-button active" data-period="mensal">Mensal</button>
-                <button class="tab-button" data-period="trimestral">Trimestral</button>
-                <button class="tab-button" data-period="anual">
-                    Anual
-                    <span class="tab-badge">-23%</span>
-                </button>
-            </div>
-            
-            <!-- Planos Mensais -->
-            <div class="plans-container active" id="planos-mensal">
-                <div class="plan-card-new">
-                    <div class="plan-header">
-                        <h3 class="plan-name">Plano Essencial</h3>
-                        <p class="plan-tagline">Para uso diário profissional</p>
+            <div class="pricing-grid">
+                <!-- Card A - Plano Padrão -->
+                <div class="pricing-card">
+                    <h3>Plano Padrão</h3>
+                    <div class="price">
+                        <div class="price-comparison">
+                            <span class="original-price">R$ 129,90</span>
+                        </div>
+                        <span class="current-price">A partir de R$ 39,90</span>
+                        <span class="price-period">/mês</span>
                     </div>
-                    
-                    <div class="plan-pricing">
-                        <div class="plan-price-main">R$ 39,90</div>
-                        <div class="plan-price-period">por mês</div>
-                    </div>
-                    
+                    <p class="plan-description">Ideal para começar</p>
                     <ul class="plan-features">
-                        <li>Acesso completo ao GPT-5</li>
-                        <li>DALL-E 3 para criar imagens</li>
-                        <li>Modo voz em tempo real</li>
-                        <li>Modo agente (tasks)</li>
-                        <li>Suporte 24/7 via WhatsApp</li>
+                        <li>🔥 ChatGPT Plus com GPT-5</li>
+                        <li>🔥 Suporte básico em horário comercial</li>
+                        <li>🔥 Todos os recursos exibidos na página</li>
+                        <li class="canva-note">🟢 Canva Pro — Incluso apenas no Plano Anual (no checkout)</li>
                     </ul>
-                    
-                    <a href="https://lastlink.com/p/C8FDE4E4F/checkout-payment/" class="plan-cta">Começar Agora — R$ 39,90/mês</a>
-                    
-                    <div class="plan-guarantee">
-                        🛡️ Garantia de 7 dias - Teste sem risco
+                    <a href="https://lastlink.com/p/CF9579AD5/checkout-payment/" class="plan-button" aria-label="Assinar Plano Padrão">Assinar Agora</a>
+                    <div class="payment-methods">
+                        <span><img src="icons8-cartão-de-crédito-48.png" alt="Cartão" class="payment-icon"> Cartão</span>
+                        <span><img src="icons8-foto-48.png" alt="PIX" class="payment-icon"> PIX</span>
                     </div>
                 </div>
                 
-                <div class="plan-card-new featured">
-                    <div class="plan-badge">⭐ MAIS ESCOLHIDO</div>
-                    
-                    <div class="plan-header">
-                        <h3 class="plan-name">Plano Premium</h3>
-                        <p class="plan-tagline">Para quem exige o máximo</p>
+                <!-- Card B - Plano Premium -->
+                <div class="pricing-card featured">
+                    <div class="best-offer">⭐ MAIS POPULAR</div>
+                    <h3>Plano Premium</h3>
+                    <div class="price">
+                        <div class="price-comparison">
+                            <span class="original-price">R$ 199,90</span>
+                        </div>
+                        <span class="current-price">A partir de R$ 64,90</span>
+                        <span class="price-period">/mês</span>
                     </div>
-                    
-                    <div class="plan-pricing">
-                        <div class="plan-price-main">R$ 64,90</div>
-                        <div class="plan-price-period">por mês</div>
-                    </div>
-                    
+                    <p class="plan-description">Tudo do Padrão, com prioridade</p>
                     <ul class="plan-features">
-                        <li class="premium-feature">Tudo do Plano Essencial</li>
-                        <li class="premium-feature">Até 3x mais rápido</li>
-                        <li class="premium-feature">Zero lentidão em pico</li>
-                        <li class="premium-feature">2x mais mensagens/dia</li>
-                        <li class="premium-feature">Suporte prioritário</li>
+                        <li>⭐ Tudo do Plano Padrão</li>
+                        <li>⭐ Contas com até 60% menos usuários por servidor</li>
+                        <li>⭐ Maior estabilidade e performance</li>
+                        <li>⭐ Limite de mensagens ampliado</li>
+                        <li>⭐ Menos limitações e prioridade de uso</li>
+                        <li>⭐ Suporte prioritário 24/7</li>
+                        <li class="canva-note">🟢 Canva Pro — Incluso apenas no Plano Anual (no checkout)</li>
                     </ul>
-                    
-                    <a href="https://lastlink.com/p/C5713A7DB/checkout-payment/" class="plan-cta">Assinar Plano Premium — R$ 64,90/mês</a>
-                    
-                    <div class="plan-guarantee">
-                        🛡️ Garantia de 7 dias - Teste sem risco
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Planos Trimestrais -->
-            <div class="plans-container" id="planos-trimestral">
-                <div class="plan-card-new">
-                    <div class="plan-header">
-                        <h3 class="plan-name">Plano Essencial</h3>
-                        <p class="plan-tagline">Estabilidade de 3 meses</p>
-                    </div>
-                    
-                    <div class="plan-pricing">
-                        <div class="plan-price-main">R$ 35,97/mês</div>
-                        <div class="plan-price-period">R$ 107,90 à vista (3 meses)</div>
-                    </div>
-                    
-                    <ul class="plan-features">
-                        <li>Acesso completo ao GPT-5</li>
-                        <li>DALL-E 3 para criar imagens</li>
-                        <li>Modo voz em tempo real</li>
-                        <li>Modo agente (tasks)</li>
-                        <li>Suporte 24/7 via WhatsApp</li>
-                    </ul>
-                    
-                    <a href="https://lastlink.com/p/CEFC23CA9/checkout-payment/" class="plan-cta">Assinar por 3 Meses — R$ 107,90</a>
-                    
-                    <div class="plan-guarantee">
-                        🛡️ Garantia de 7 dias - Teste sem risco
-                    </div>
-                </div>
-                
-                <div class="plan-card-new featured">
-                    <div class="plan-badge">⭐ MAIS ESCOLHIDO</div>
-                    
-                    <div class="plan-header">
-                        <h3 class="plan-name">Plano Premium</h3>
-                        <p class="plan-tagline">Performance garantida por 3 meses</p>
-                    </div>
-                    
-                    <div class="plan-pricing">
-                        <div class="plan-price-main">R$ 62,63/mês</div>
-                        <div class="plan-price-period">R$ 187,90 à vista (3 meses)</div>
-                    </div>
-                    
-                    <ul class="plan-features">
-                        <li class="premium-feature">Tudo do Plano Essencial</li>
-                        <li class="premium-feature">Até 3x mais rápido</li>
-                        <li class="premium-feature">Zero lentidão em pico</li>
-                        <li class="premium-feature">2x mais mensagens/dia</li>
-                        <li class="premium-feature">Suporte prioritário</li>
-                    </ul>
-                    
-                    <a href="https://lastlink.com/p/C757437A1/checkout-payment/" class="plan-cta">Assinar Plano Premium — R$ 187,90</a>
-                    
-                    <div class="plan-guarantee">
-                        🛡️ Garantia de 7 dias - Teste sem risco
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Planos Anuais -->
-            <div class="plans-container" id="planos-anual">
-                <div class="plan-card-new">
-                    <div class="plan-header">
-                        <h3 class="plan-name">Plano Essencial</h3>
-                        <p class="plan-tagline">Melhor custo-benefício do ano</p>
-                    </div>
-                    
-                    <div class="plan-pricing">
-                        <div class="plan-price-main">R$ 30,83/mês</div>
-                        <div class="plan-price-period">R$ 369,90 à vista ou 12x de R$ 39,39</div>
-                        <div class="plan-savings">💰 Economize R$ 108,90 (23%)</div>
-                    </div>
-                    
-                    <ul class="plan-features">
-                        <li>Acesso completo ao GPT-5</li>
-                        <li>DALL-E 3 para criar imagens</li>
-                        <li>Modo voz em tempo real</li>
-                        <li>Modo agente (tasks)</li>
-                        <li class="premium-feature">🎁 Canva Pro GRÁTIS (R$ 240/ano)</li>
-                    </ul>
-                    
-                    <a href="https://lastlink.com/p/C38CA82A9/checkout-payment/" class="plan-cta">Economizar 23% + Canva Pro — R$ 369,90</a>
-                    
-                    <div class="plan-guarantee">
-                        🛡️ Garantia de 7 dias - Teste sem risco
-                    </div>
-                </div>
-                <div class="plan-card-new featured">
-                    <div class="plan-badge">⭐ MAIS ESCOLHIDO</div>
-                    
-                    <div class="plan-header">
-                        <h3 class="plan-name">Plano Premium</h3>
-                        <p class="plan-tagline">Máxima performance o ano todo</p>
-                    </div>
-                    
-                    <div class="plan-pricing">
-                        <div class="plan-price-main">R$ 54,99/mês</div>
-                        <div class="plan-price-period">R$ 659,90 à vista ou 12x de R$ 70,27</div>
-                        <div class="plan-savings">💰 Economize R$ 118,90 (15%)</div>
-                    </div>
-                    
-                    <ul class="plan-features">
-                        <li class="premium-feature">Tudo do Plano Essencial</li>
-                        <li class="premium-feature">Até 3x mais rápido</li>
-                        <li class="premium-feature">Zero lentidão em pico</li>
-                        <li class="premium-feature">2x mais mensagens/dia</li>
-                        <li class="premium-feature">🎁 Canva Pro GRÁTIS (R$ 240/ano)</li>
-                    </ul>
-                    
-                    <a href="https://lastlink.com/p/C99BFEF2D/checkout-payment/" class="plan-cta">Economizar 15% + Canva Pro — R$ 659,90</a>
-                    
-                    <div class="plan-guarantee">
-                        🛡️ Garantia de 7 dias - Teste sem risco
+                    <a href="https://lastlink.com/p/C0C072529/checkout-payment/" class="plan-button premium-button" aria-label="Assinar Plano Premium">Assinar Premium</a>
+                    <div class="payment-methods">
+                        <span><img src="icons8-cartão-de-crédito-48.png" alt="Cartão" class="payment-icon"> Cartão</span>
+                        <span><img src="icons8-foto-48.png" alt="PIX" class="payment-icon"> PIX</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    </section>
+    </section>
 
     <!-- Seção Garantias e Segurança -->
     <section class="security-guarantees">
@@ -581,60 +452,6 @@
 
     <script src="script.js"></script>
     <script src="scroll-animations.js"></script>
-    
-    <!-- Script para alternar entre tabs de planos -->
-    <script>
-        // Função para alternar tabs
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const plansContainers = document.querySelectorAll('.plans-container');
-        
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active de todos os botões
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // Adiciona active no botão clicado
-                button.classList.add('active');
-                
-                // Esconde todos os containers
-                plansContainers.forEach(container => {
-                    container.classList.remove('active');
-                });
-                
-                // Mostra o container correspondente
-                const period = button.getAttribute('data-period');
-                const targetContainer = document.getElementById(`planos-${period}`);
-                if (targetContainer) {
-                    targetContainer.classList.add('active');
-                }
-                
-                // Scroll suave até os planos
-                targetContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            });
-        });
-        
-        // Animação de entrada dos cards
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        document.querySelectorAll('.plan-card-new').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease-out';
-            observer.observe(card);
-        });
-    </script>
 </body>
 </html>
 
