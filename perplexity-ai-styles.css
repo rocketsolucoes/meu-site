@@ -924,3 +924,309 @@ body {
 .animate-on-scroll.animated {
     animation: fadeInUp 0.8s ease-out forwards;
 }
+
+/* Seção Modelos de IA */
+.ai-models-section {
+    padding: 80px 0;
+    background: rgba(15, 20, 35, 0.5);
+}
+
+.ai-models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.model-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.model-card.featured {
+    border-color: rgba(0, 255, 255, 0.4);
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+.model-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, #00FFFF 0%, #00CCCC 100%);
+    color: #0A0F1C;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.model-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.model-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.model-icon.gpt {
+    background: linear-gradient(135deg, #10a37f 0%, #0d8a6b 100%);
+    color: #ffffff;
+}
+
+.model-icon.claude {
+    background: linear-gradient(135deg, #d97757 0%, #c05a3e 100%);
+    color: #ffffff;
+}
+
+.model-icon.gemini {
+    background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%);
+    color: #ffffff;
+}
+
+.model-icon.sonar {
+    background: linear-gradient(135deg, #00FFFF 0%, #00CCCC 100%);
+    color: #0A0F1C;
+}
+
+.model-info h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.model-provider {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.model-description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.model-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.feature-tag {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    color: #00FFFF;
+}
+
+/* Seção Recursos Premium */
+.premium-features {
+    padding: 80px 0;
+}
+
+.premium-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.premium-feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+.premium-feature-card:hover {
+    border-color: rgba(0, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.feature-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #00FFFF 0%, #00CCCC 100%);
+    color: #0A0F1C;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.premium-feature-card h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.feature-intro {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.feature-how-it-works {
+    background: rgba(0, 255, 255, 0.05);
+    border-left: 3px solid #00FFFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+}
+
+.feature-how-it-works h4 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #00FFFF;
+}
+
+.feature-how-it-works ol {
+    padding-left: 20px;
+}
+
+.feature-how-it-works li {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.feature-examples h4 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.example-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.example-item:hover {
+    background: rgba(0, 255, 255, 0.03);
+    border-color: rgba(0, 255, 255, 0.2);
+}
+
+.example-item strong {
+    display: block;
+    color: #00FFFF;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.example-item p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.premium-cta {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 16px;
+}
+
+.premium-cta-text {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.premium-cta-text strong {
+    color: #00FFFF;
+}
+
+/* Informações de Ativação */
+.activation-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+
+.activation-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00FFFF;
+}
+
+.activation-text {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.activation-text strong {
+    color: #00FFFF;
+}
+
+/* Responsividade para novas seções */
+@media (max-width: 968px) {
+    .ai-models-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    
+    .premium-features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .ai-models-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .premium-feature-card {
+        padding: 28px 20px;
+    }
+    
+    .premium-feature-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .feature-intro {
+        font-size: 1rem;
+    }
+    
+    .activation-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
