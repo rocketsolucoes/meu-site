@@ -117,6 +117,10 @@ body {
     color: #00FFFF;
     margin-bottom: 24px;
     animation: fadeInDown 0.8s ease-out;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .hero-badge svg {
@@ -180,6 +184,7 @@ body {
 .cta-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     padding: 16px 40px;
     font-size: 1.1rem;
@@ -189,6 +194,8 @@ body {
     transition: all 0.3s ease;
     cursor: pointer;
     border: none;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .cta-primary {
@@ -272,6 +279,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 16px;
+    white-space: nowrap;
 }
 
 .section-title {
@@ -834,23 +842,56 @@ body {
     }
     
     .hero {
-        padding: 80px 0 60px;
+        padding: 60px 0 50px;
+    }
+    
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        white-space: nowrap;
+    }
+    
+    .hero-badge svg {
+        width: 16px;
+        height: 16px;
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        line-height: 1.2;
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 14px 24px;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+    
+    .cta-note {
+        font-size: 0.85rem;
     }
     
     .stat-number {
         font-size: 2rem;
     }
     
+    .section-badge {
+        font-size: 0.75rem;
+        padding: 5px 14px;
+        white-space: nowrap;
+    }
+    
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
     }
     
     .benefits-grid,
@@ -859,38 +900,175 @@ body {
     }
     
     .pricing-card {
-        padding: 32px 24px;
+        padding: 32px 20px;
     }
     
     .price-value {
-        font-size: 2rem;
-    }
-    
-    .cta-button {
-        padding: 14px 32px;
-        font-size: 1rem;
-    }
-    
-    .cta-large {
-        padding: 16px 40px;
-        font-size: 1.1rem;
-    }
-    
-    .final-cta-title {
         font-size: 1.75rem;
     }
     
+    .cta-large {
+        padding: 16px 32px;
+        font-size: 1rem;
+        white-space: normal;
+        text-align: center;
+    }
+    
+    .final-cta-title {
+        font-size: 1.5rem;
+    }
+    
     .final-cta-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .comparison-table {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .comparison-table th,
     .comparison-table td {
-        padding: 12px 8px;
+        padding: 10px 6px;
+        min-width: 80px;
+    }
+    
+    .feature-name {
+        min-width: 100px;
+        font-size: 0.8rem;
+    }
+    
+    .table-header-content {
+        font-size: 0.85rem;
+    }
+    
+    .badge-winner {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+        white-space: nowrap;
+    }
+    
+    .feature-desc {
+        font-size: 0.75rem;
+    }
+    
+    /* Ajustes para seção de modelos */
+    .ai-models-grid {
+        gap: 16px;
+    }
+    
+    .model-card {
+        padding: 20px;
+    }
+    
+    .model-badge {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+        white-space: nowrap;
+    }
+    
+    .model-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+    
+    .model-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .model-provider {
+        font-size: 0.8rem;
+    }
+    
+    .model-description {
+        font-size: 0.9rem;
+    }
+    
+    .feature-tag {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+    
+    /* Ajustes para recursos premium */
+    .premium-features-grid {
+        gap: 30px;
+    }
+    
+    .premium-feature-card {
+        padding: 24px 16px;
+    }
+    
+    .feature-badge {
+        font-size: 0.75rem;
+        padding: 5px 14px;
+        white-space: nowrap;
+    }
+    
+    .premium-feature-card h3 {
+        font-size: 1.35rem;
+    }
+    
+    .feature-intro {
+        font-size: 0.95rem;
+    }
+    
+    .feature-how-it-works {
+        padding: 16px;
+    }
+    
+    .feature-how-it-works h4 {
+        font-size: 1rem;
+    }
+    
+    .feature-how-it-works li {
+        font-size: 0.9rem;
+    }
+    
+    .feature-examples h4 {
+        font-size: 1rem;
+    }
+    
+    .example-item {
+        padding: 14px;
+    }
+    
+    .example-item strong {
+        font-size: 0.85rem;
+    }
+    
+    .example-item p {
+        font-size: 0.85rem;
+    }
+    
+    .premium-cta {
+        padding: 24px 16px;
+    }
+    
+    .premium-cta-text {
+        font-size: 1.05rem;
+    }
+    
+    .activation-info {
+        flex-direction: row;
+        text-align: left;
+        padding: 16px;
+    }
+    
+    .activation-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .activation-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .activation-text {
+        font-size: 0.9rem;
     }
 }
 
@@ -1200,11 +1378,16 @@ body {
 /* Responsividade para novas seções */
 @media (max-width: 968px) {
     .ai-models-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     
     .premium-features-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .model-card {
+        padding: 24px;
     }
 }
 
@@ -1223,10 +1406,5 @@ body {
     
     .feature-intro {
         font-size: 1rem;
-    }
-    
-    .activation-info {
-        flex-direction: column;
-        text-align: center;
     }
 }
