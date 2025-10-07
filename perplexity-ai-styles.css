@@ -1768,6 +1768,30 @@ body {
     font-size: 0.95rem;
 }
 
+.cost-alert-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cost-alert-content li {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.cost-alert-content li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff6464;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 .cost-alert-content strong {
     color: #ffffff;
     font-weight: 700;
@@ -1839,5 +1863,16 @@ body {
     .cost-alert-content p {
         font-size: 0.85rem;
         line-height: 1.6;
+    }
+    
+    .cost-alert-content li {
+        font-size: 0.85rem;
+        line-height: 1.7;
+        margin-bottom: 6px;
+        padding-left: 18px;
+    }
+    
+    .cost-alert-content li:before {
+        font-size: 1rem;
     }
 }
