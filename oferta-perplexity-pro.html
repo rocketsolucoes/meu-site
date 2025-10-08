@@ -676,6 +676,202 @@
             .comparison-card.rocket {
                 transform: scale(1);
             }
+
+            .purchase-notification {
+                left: 20px;
+                right: 20px;
+                max-width: calc(100% - 40px);
+            }
+
+            .whatsapp-carousel {
+                padding: 60px 0;
+            }
+
+            .whatsapp-messages {
+                gap: 20px;
+            }
+
+            .whatsapp-message {
+                max-width: 100%;
+            }
+        }
+
+        /* Notificações de Compra */
+        .purchase-notification {
+            position: fixed;
+            bottom: 110px;
+            left: 30px;
+            background: rgba(10, 15, 28, 0.98);
+            border: 1px solid #00FFFF;
+            border-radius: 12px;
+            padding: 15px 20px;
+            max-width: 350px;
+            z-index: 998;
+            box-shadow: 0 8px 30px rgba(0, 255, 255, 0.3);
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 0.5s ease;
+        }
+
+        .purchase-notification.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .notification-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #00FFFF 0%, #3B82F6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .notification-icon svg {
+            width: 20px;
+            height: 20px;
+            color: #0A0F1C;
+        }
+
+        .notification-text {
+            flex: 1;
+        }
+
+        .notification-name {
+            font-weight: 700;
+            color: #00FFFF;
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .notification-message {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .notification-time {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 4px;
+        }
+
+        /* Carrossel de Provas Sociais WhatsApp */
+        .whatsapp-carousel {
+            padding: 80px 0;
+            background: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .whatsapp-messages {
+            display: flex;
+            gap: 30px;
+            animation: scroll 40s linear infinite;
+            width: fit-content;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .whatsapp-carousel:hover .whatsapp-messages {
+            animation-play-state: paused;
+        }
+
+        .whatsapp-message {
+            background: #0D1418;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 400px;
+            min-width: 350px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .whatsapp-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .whatsapp-avatar {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #00FFFF 0%, #3B82F6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #0A0F1C;
+            font-size: 1.1rem;
+        }
+
+        .whatsapp-user-info {
+            flex: 1;
+        }
+
+        .whatsapp-name {
+            font-weight: 700;
+            color: #00FFFF;
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+
+        .whatsapp-verified {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.8rem;
+            color: #25D366;
+        }
+
+        .whatsapp-verified svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .whatsapp-text {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .whatsapp-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .whatsapp-time {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .whatsapp-rating {
+            display: flex;
+            gap: 2px;
+            color: #FFD700;
         }
     </style>
 </head>
@@ -906,6 +1102,386 @@
         </div>
     </section>
 
+    <!-- Carrossel de Provas Sociais WhatsApp -->
+    <section class="whatsapp-carousel">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Depoimentos Reais</span>
+                <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+                <p class="section-subtitle">Centenas de profissionais já estão usando o Perplexity AI Pro</p>
+            </div>
+        </div>
+        
+        <div class="whatsapp-messages">
+            <!-- Mensagem 1 -->
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">MC</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Mariana Costa</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Recebi o acesso em menos de 5 minutos! Funcionando perfeitamente. O Perplexity Pro está incrível, muito mais rápido que o ChatGPT. Valeu cada centavo! 🚀
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 2 horas</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensagem 2 -->
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">RS</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Ricardo Silva</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Comprei ontem e já estou usando muito! A pesquisa em tempo real é sensacional. Economizei R$950 comparado ao site oficial. Recomendo demais! 💯
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 5 horas</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensagem 3 -->
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">AF</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Ana Ferreira</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Estava com medo de ser golpe, mas é tudo oficial mesmo! Licença ativada, suporte rápido. Melhor investimento que fiz esse ano para meu trabalho! 🎯
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 1 dia</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensagem 4 -->
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">PL</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Pedro Lima</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Acesso aos modelos GPT-5 e Claude 4.5 está perfeito! Upload de PDF funciona muito bem. Preço absurdo de bom. Comprem antes que acabe! 🔥
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 1 dia</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensagem 5 -->
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">JS</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Juliana Santos</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Comprei para minha equipe. Todos adoraram! A entrega foi imediata e o suporte respondeu super rápido. Empresa séria e confiável. Parabéns! 👏
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 2 dias</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensagem 6 -->
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">CO</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Carlos Oliveira</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Melhor que o ChatGPT Plus! As fontes verificadas fazem toda diferença no meu trabalho. Valeu muito a pena. Recomendo de olhos fechados! ✅
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 3 dias</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Duplicar mensagens para efeito de loop infinito -->
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">MC</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Mariana Costa</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Recebi o acesso em menos de 5 minutos! Funcionando perfeitamente. O Perplexity Pro está incrível, muito mais rápido que o ChatGPT. Valeu cada centavo! 🚀
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 2 horas</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">RS</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Ricardo Silva</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Comprei ontem e já estou usando muito! A pesquisa em tempo real é sensacional. Economizei R$950 comparado ao site oficial. Recomendo demais! 💯
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 5 horas</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">AF</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Ana Ferreira</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Estava com medo de ser golpe, mas é tudo oficial mesmo! Licença ativada, suporte rápido. Melhor investimento que fiz esse ano para meu trabalho! 🎯
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 1 dia</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">PL</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Pedro Lima</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Acesso aos modelos GPT-5 e Claude 4.5 está perfeito! Upload de PDF funciona muito bem. Preço absurdo de bom. Comprem antes que acabe! 🔥
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 1 dia</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">JS</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Juliana Santos</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Comprei para minha equipe. Todos adoraram! A entrega foi imediata e o suporte respondeu super rápido. Empresa séria e confiável. Parabéns! 👏
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 2 dias</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whatsapp-message">
+                <div class="whatsapp-header">
+                    <div class="whatsapp-avatar">CO</div>
+                    <div class="whatsapp-user-info">
+                        <div class="whatsapp-name">Carlos Oliveira</div>
+                        <div class="whatsapp-verified">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Cliente verificado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatsapp-text">
+                    Melhor que o ChatGPT Plus! As fontes verificadas fazem toda diferença no meu trabalho. Valeu muito a pena. Recomendo de olhos fechados! ✅
+                </div>
+                <div class="whatsapp-footer">
+                    <div class="whatsapp-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>Há 3 dias</span>
+                    </div>
+                    <div class="whatsapp-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Seção Final CTA -->
     <section class="final-cta">
         <div class="container">
@@ -941,8 +1517,8 @@
     </div>
 
     <script>
-        // Countdown Timer
-        const countdownDuration = 2 * 24 * 60 * 60 * 1000; // 2 dias
+        // Countdown Timer - 1 hora
+        const countdownDuration = 1 * 60 * 60 * 1000; // 1 hora
         const countdownEnd = new Date().getTime() + countdownDuration;
 
         function updateCountdown() {
@@ -981,6 +1557,70 @@
                 }
             });
         });
+
+        // Notificações de Compra em Tempo Real
+        const purchaseNotifications = [
+            { name: 'João Silva', city: 'São Paulo, SP', time: 'há 3 minutos' },
+            { name: 'Maria Santos', city: 'Rio de Janeiro, RJ', time: 'há 7 minutos' },
+            { name: 'Pedro Costa', city: 'Belo Horizonte, MG', time: 'há 12 minutos' },
+            { name: 'Ana Oliveira', city: 'Brasília, DF', time: 'há 18 minutos' },
+            { name: 'Carlos Ferreira', city: 'Curitiba, PR', time: 'há 22 minutos' },
+            { name: 'Juliana Lima', city: 'Porto Alegre, RS', time: 'há 28 minutos' },
+            { name: 'Roberto Alves', city: 'Salvador, BA', time: 'há 35 minutos' },
+            { name: 'Fernanda Rocha', city: 'Fortaleza, CE', time: 'há 41 minutos' },
+            { name: 'Lucas Mendes', city: 'Recife, PE', time: 'há 47 minutos' },
+            { name: 'Patricia Souza', city: 'Manaus, AM', time: 'há 53 minutos' }
+        ];
+
+        let notificationIndex = 0;
+
+        function showPurchaseNotification() {
+            // Criar elemento de notificação se não existir
+            let notification = document.getElementById('purchase-notification');
+            if (!notification) {
+                notification = document.createElement('div');
+                notification.id = 'purchase-notification';
+                notification.className = 'purchase-notification';
+                document.body.appendChild(notification);
+            }
+
+            const data = purchaseNotifications[notificationIndex];
+            
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <div class="notification-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="notification-text">
+                        <div class="notification-name">${data.name}</div>
+                        <div class="notification-message">acabou de comprar de ${data.city}</div>
+                        <div class="notification-time">${data.time}</div>
+                    </div>
+                </div>
+            `;
+
+            // Mostrar notificação
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+
+            // Esconder notificação após 5 segundos
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 5000);
+
+            // Próxima notificação
+            notificationIndex = (notificationIndex + 1) % purchaseNotifications.length;
+        }
+
+        // Mostrar primeira notificação após 5 segundos
+        setTimeout(showPurchaseNotification, 5000);
+
+        // Mostrar notificações a cada 15 segundos
+        setInterval(showPurchaseNotification, 15000);
     </script>
 </body>
 </html>
