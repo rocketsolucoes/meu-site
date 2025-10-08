@@ -520,6 +520,106 @@
             color: #FF5B2E;
         }
 
+        /* Como Funciona a Ativação */
+        .activation-section {
+            padding: 80px 0;
+            background: rgba(0, 255, 255, 0.02);
+            border-top: 1px solid rgba(0, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        .activation-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .activation-steps {
+            margin-top: 40px;
+        }
+
+        .activation-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .activation-step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00FFFF 0%, #00B8D4 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0A0F1C;
+        }
+
+        .step-content {
+            flex: 1;
+            padding-top: 5px;
+        }
+
+        .step-content p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .step-content strong {
+            color: #00FFFF;
+            font-weight: 600;
+        }
+
+        .activation-highlight {
+            background: rgba(0, 255, 255, 0.05);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .activation-highlight p {
+            font-size: 1.1rem;
+            color: #00FFFF;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .activation-section {
+                padding: 60px 0;
+            }
+
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .step-content p {
+                font-size: 1rem;
+            }
+
+            .activation-highlight {
+                padding: 15px 20px;
+            }
+
+            .activation-highlight p {
+                font-size: 1rem;
+            }
+        }
+
         /* Final CTA */
         .final-cta {
             padding: 100px 0;
@@ -1099,6 +1199,45 @@
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
             </a>
+        </div>
+    </section>
+
+    <!-- Como Funciona a Ativação -->
+    <section class="activation-section">
+        <div class="container">
+            <div class="activation-content">
+                <div class="section-header">
+                    <span class="section-badge">Processo Simples</span>
+                    <h2 class="section-title">Como Funciona a Ativação?</h2>
+                </div>
+
+                <div class="activation-steps">
+                    <div class="activation-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <p>Acesse a página de pagamento e <strong>realize a compra</strong> com segurança.</p>
+                        </div>
+                    </div>
+
+                    <div class="activation-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <p>Entre em contato com <strong>nosso suporte</strong> para ativação da sua licença.</p>
+                        </div>
+                    </div>
+
+                    <div class="activation-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <p>Sua conta estará <strong>ativada e funcional</strong> no Perplexity AI Pro.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activation-highlight">
+                    <p>✓ Acesso garantido por 12 meses completos</p>
+                </div>
+            </div>
         </div>
     </section>
 
