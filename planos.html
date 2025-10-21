@@ -649,5 +649,42 @@
             observer.observe(card);
         });
     </script>
+
+    <!-- Script de Captura e Repasse de Parâmetros UTM -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lista de parâmetros de rastreamento a serem capturados
+            const paramsToKeep = [
+                'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
+                'gclid', 'gad_source', 'gad_campaignid', 'gbraid'
+            ];
+
+            // Captura os parâmetros da URL atual
+            const urlParams = new URLSearchParams(window.location.search);
+            const capturedParams = new URLSearchParams();
+
+            urlParams.forEach((value, key) => {
+                if (paramsToKeep.includes(key)) {
+                    capturedParams.append(key, value);
+                }
+            });
+
+            const queryString = capturedParams.toString();
+
+            // Se houver parâmetros, anexa aos links do Lastlink
+            if (queryString) {
+                const checkoutLinks = document.querySelectorAll('a[href*="lastlink.com"]');
+
+                checkoutLinks.forEach(link => {
+                    const originalHref = link.href;
+                    const separator = originalHref.includes('?') ? '&' : '?';
+                    link.href = originalHref + separator + queryString;
+                });
+
+                console.log('✅ UTM Tracker: Parâmetros capturados e anexados');
+                console.log('📊 Parâmetros:', queryString);
+            }
+        });
+    </script>
 </body>
 </html>
