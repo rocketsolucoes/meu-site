@@ -3010,12 +3010,15 @@ body {
 /* Melhorar proporções do grid no desktop */
 @media (min-width: 1025px) {
     .plans-container.active {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         max-width: 1100px !important;
         gap: 20px !important;
     }
     
     .plan-card-new {
-        max-width: 350px !important;
+        max-width: none !important;
+        width: 100% !important;
     }
 }
 
