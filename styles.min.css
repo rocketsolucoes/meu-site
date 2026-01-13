@@ -1694,6 +1694,10 @@ section {
         padding: 0 50px;
     }
     
+    .testimonials-carousel {
+        overflow: hidden !important;
+    }
+    
     .testimonial-card-carousel {
         flex: 0 0 100%;
         width: 100%;
