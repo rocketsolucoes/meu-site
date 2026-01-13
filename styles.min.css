@@ -3744,3 +3744,181 @@ body {
         padding: 14px 28px;
     }
 }
+
+
+/* ===== CORREÇÕES DE ESTILIZAÇÃO - 13/01/2026 ===== */
+
+/* 1. Seção "Por que assinar" - Ícones e Cards alinhados */
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.15), rgba(255, 107, 53, 0.05));
+    border-radius: 20px;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.feature-card h3 {
+    flex-shrink: 0;
+}
+
+.feature-card p {
+    flex-grow: 1;
+}
+
+/* 2. Seção de Depoimentos - Melhorias de estilização */
+.testimonials {
+    padding: 80px 0;
+}
+
+.testimonials .section-title {
+    margin-bottom: 40px;
+}
+
+.testimonial-card-carousel {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 107, 53, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-avatar {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    font-size: 20px;
+}
+
+.testimonial-rating {
+    letter-spacing: 2px;
+}
+
+.testimonial-comment {
+    font-size: 0.95rem;
+    color: #e5e7eb;
+}
+
+.testimonial-verified {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 3. Seção de Preços - Melhorias de estilização */
+.pricing-modern {
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0) 0%, rgba(255, 107, 53, 0.03) 50%, rgba(17, 24, 39, 0) 100%);
+}
+
+.pricing-card-modern {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card-modern::before {
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b35, #f7931e, #ff6b35);
+}
+
+.pricing-badge {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.pricing-value {
+    gap: 4px;
+}
+
+.pricing-currency {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ff6b35;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.pricing-number {
+    background: linear-gradient(135deg, #ffffff, #e5e7eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+}
+
+.pricing-cents {
+    color: #ff6b35;
+    font-weight: 700;
+}
+
+.pricing-period {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+.pricing-feature {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pricing-feature:last-child {
+    border-bottom: none;
+}
+
+.pricing-check-icon {
+    color: #ff6b35;
+}
+
+.pricing-cta {
+    font-size: 1.1rem;
+    padding: 18px 36px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-guarantee {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.guarantee-icon {
+    color: #4ade80;
+}
+
+/* Responsividade para as correções */
+@media (max-width: 768px) {
+    .feature-card {
+        min-height: auto;
+    }
+    
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+    }
+    
+    .pricing-currency {
+        font-size: 1.5rem;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+}
