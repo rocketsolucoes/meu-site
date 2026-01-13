@@ -116,10 +116,7 @@ html {
     min-height: 100%;
 }
 
-/* Scroll suave e prevenção de área branca */
-* {
-    scroll-behavior: smooth;
-}
+/* Scroll suave removido para melhor performance */
 
 /* Efeito de fundo sutil */
 body::before {
@@ -1072,10 +1069,7 @@ section {
     animation: fadeInUp 0.6s ease-out;
 }
 
-/* Smooth scroll */
-html {
-    scroll-behavior: smooth;
-}
+/* Smooth scroll removido para melhor performance */
 
 
 

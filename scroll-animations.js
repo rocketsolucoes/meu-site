@@ -44,20 +44,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Executar na primeira carga
     animateVisibleTitles();
 
-    // Executar durante o scroll com throttle para performance
+    // Executar durante o scroll com throttle otimizado
     let ticking = false;
+    let scrollTimeout;
+    
     function handleScroll() {
+        // Limpar timeout anterior
+        clearTimeout(scrollTimeout);
+        
         if (!ticking) {
-            requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => {
                 animateVisibleTitles();
                 ticking = false;
             });
             ticking = true;
         }
+        
+        // Adicionar debounce de 150ms
+        scrollTimeout = setTimeout(() => {
+            ticking = false;
+        }, 150);
     }
 
-    // Adicionar listener de scroll
-    window.addEventListener('scroll', handleScroll);
+    // Adicionar listener de scroll com passive para melhor performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     // Adicionar efeito de hover nos cards das features
     const featureCards = document.querySelectorAll('.feature-card');
