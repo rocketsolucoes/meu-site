@@ -758,7 +758,6 @@
             
             let currentIndex = 0;
             let cardsPerView = 3;
-            let autoPlayInterval;
             
             // Calcular quantos cards mostrar por vez baseado na largura da tela
             function updateCardsPerView() {
@@ -828,31 +827,14 @@
                 }
             }
             
-            // Auto-play
-            function startAutoPlay() {
-                autoPlayInterval = setInterval(nextSlide, 5000); // Muda a cada 5 segundos
-            }
-            
-            function stopAutoPlay() {
-                clearInterval(autoPlayInterval);
-            }
-            
             // Event listeners
             nextBtn.addEventListener('click', () => {
                 nextSlide();
-                stopAutoPlay();
-                startAutoPlay(); // Reinicia o auto-play
             });
             
             prevBtn.addEventListener('click', () => {
                 prevSlide();
-                stopAutoPlay();
-                startAutoPlay(); // Reinicia o auto-play
             });
-            
-            // Pausar auto-play ao passar o mouse
-            carousel.addEventListener('mouseenter', stopAutoPlay);
-            carousel.addEventListener('mouseleave', startAutoPlay);
             
             // Suporte para swipe em dispositivos móveis
             let touchStartX = 0;
@@ -860,13 +842,11 @@
             
             carousel.addEventListener('touchstart', (e) => {
                 touchStartX = e.changedTouches[0].screenX;
-                stopAutoPlay();
             });
             
             carousel.addEventListener('touchend', (e) => {
                 touchEndX = e.changedTouches[0].screenX;
                 handleSwipe();
-                startAutoPlay();
             });
             
             function handleSwipe() {
@@ -882,16 +862,13 @@
             window.addEventListener('resize', () => {
                 updateCardsPerView();
                 createIndicators();
-                goToSlide(0);
+                goToSlide(currentIndex); // Manter a página atual
             });
             
             // Inicializar
             updateCardsPerView();
             createIndicators();
-            currentIndex = 0; // Forçar índice inicial
-            carousel.style.transform = 'translateX(0px)'; // Forçar posição inicial
-            updateIndicators(); // Atualizar indicadores
-            setTimeout(() => startAutoPlay(), 3000); // Iniciar autoplay após 3 segundos
+            goToSlide(0); // Iniciar na primeira página
         });
     </script>
 </body>
