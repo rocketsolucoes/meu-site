@@ -767,7 +767,7 @@
                 } else if (window.innerWidth <= 1024) {
                     cardsPerView = 2;
                 } else {
-                    cardsPerView = 3;
+                    cardsPerView = 4;
                 }
             }
             
@@ -798,14 +798,13 @@
                 const totalSlides = Math.ceil(cards.length / cardsPerView);
                 currentIndex = Math.max(0, Math.min(index, totalSlides - 1));
                 
-                const cardWidth = cards[0].offsetWidth;
+                // Recalcular dimensões a cada navegação para garantir precisão
+                const cardWidth = cards[0].getBoundingClientRect().width;
                 const gap = 30;
-                // Calcular o offset baseado no número de cards a pular, não no índice do slide
                 const cardsToSkip = currentIndex * cardsPerView;
                 const offset = cardsToSkip * (cardWidth + gap);
                 
                 carousel.style.transform = `translateX(-${offset}px)`;
-                carousel.style.transition = 'transform 0.5s ease-in-out';
                 updateIndicators();
             }
             
