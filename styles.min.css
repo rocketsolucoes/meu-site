@@ -3822,15 +3822,15 @@ body {
 .audience-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 16px;
 }
 
 .audience-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 107, 53, 0.2);
     border-radius: 12px;
-    padding: 25px;
-    height: 220px;
+    padding: 20px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3858,13 +3858,13 @@ body {
 }
 
 .audience-icon {
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1;
     transition: all 0.4s ease;
 }
 
 .audience-title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     color: #ffffff;
     margin: 0;
@@ -3872,9 +3872,9 @@ body {
 }
 
 .audience-arrow {
-    font-size: 14px;
+    font-size: 12px;
     color: #ff6b35;
-    margin-top: 8px;
+    margin-top: 6px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -3887,7 +3887,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 25px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3919,10 +3919,10 @@ body {
 }
 
 .audience-subtitle {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: #ff6b35;
-    margin: 0 0 15px 0;
+    margin: 0 0 12px 0;
     text-align: center;
 }
 
@@ -3934,10 +3934,10 @@ body {
 }
 
 .audience-list li {
-    font-size: 13px;
-    line-height: 1.8;
+    font-size: 12px;
+    line-height: 1.7;
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     padding-left: 0;
 }
 
@@ -3959,7 +3959,7 @@ body {
     }
     
     .audience-card {
-        height: 200px;
+        height: 170px;
     }
 }
 
