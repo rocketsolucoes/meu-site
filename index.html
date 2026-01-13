@@ -888,7 +888,10 @@
             // Inicializar
             updateCardsPerView();
             createIndicators();
-            startAutoPlay();
+            currentIndex = 0; // Forçar índice inicial
+            carousel.style.transform = 'translateX(0px)'; // Forçar posição inicial
+            updateIndicators(); // Atualizar indicadores
+            setTimeout(() => startAutoPlay(), 3000); // Iniciar autoplay após 3 segundos
         });
     </script>
 </body>
