@@ -3930,7 +3930,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: left;
+    text-align: center;
 }
 
 .audience-list li {
@@ -3939,6 +3939,7 @@ body {
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 8px;
     padding-left: 0;
+    text-align: center;
 }
 
 .audience-list li:last-child {
