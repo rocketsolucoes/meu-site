@@ -3765,10 +3765,10 @@ body {
     text-align: center;
 }
 
-/* 2. Seção de Depoimentos - Mostrar apenas 4 cards completos por página */
+/* 2. Seção de Depoimentos - Garantir que os cards apareçam em todas as páginas */
 .testimonials-carousel {
     display: flex !important;
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 
 .testimonial-card-carousel {
