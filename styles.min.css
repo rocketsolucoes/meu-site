@@ -3817,3 +3817,119 @@ body {
     max-width: 16px !important;
     flex-shrink: 0;
 }
+
+/* Novos estilos para audience cards expandidos */
+.audience-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    border-radius: 12px;
+    padding: 30px 25px;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.audience-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 107, 53, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+}
+
+.audience-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.audience-icon {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.audience-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.audience-card-body {
+    margin-top: 15px;
+}
+
+.audience-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff6b35;
+    margin: 0 0 12px 0;
+}
+
+.audience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.audience-list li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    padding-left: 0;
+}
+
+.audience-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Remover estilos antigos */
+.audience-item {
+    display: none;
+}
+
+.audience-description {
+    display: none;
+}
+
+/* Responsivo para audience cards */
+@media (max-width: 768px) {
+    .audience-card {
+        padding: 25px 20px;
+    }
+    
+    .audience-icon {
+        font-size: 28px;
+    }
+    
+    .audience-title {
+        font-size: 16px;
+    }
+    
+    .audience-list li {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .audience-card {
+        padding: 20px 18px;
+    }
+    
+    .audience-icon {
+        font-size: 24px;
+    }
+    
+    .audience-title {
+        font-size: 15px;
+    }
+    
+    .audience-subtitle {
+        font-size: 13px;
+    }
+    
+    .audience-list li {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+}
