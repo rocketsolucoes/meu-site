@@ -3307,3 +3307,310 @@ body {
         padding: 5px 12px !important;
     }
 }
+
+
+/* ===== ESTILOS PARA PLANO ÚNICO CENTRALIZADO ===== */
+
+/* Subtítulo da seção de preços */
+.pricing-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* Container para plano único */
+.plans-container-single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Card do plano único */
+.plan-card-single {
+    background: rgba(255, 255, 255, 0.08);
+    border: 3px solid #ff6b35;
+    border-radius: 30px;
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.plan-card-single:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(255, 107, 53, 0.4);
+    border-color: #f7931e;
+}
+
+/* Header do plano */
+.plan-header-single {
+    text-align: center;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.plan-badge-single {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+    }
+}
+
+.plan-name-single {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff, #ff6b35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.plan-tagline-single {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+}
+
+/* Preço do plano */
+.plan-pricing-single {
+    text-align: center;
+    margin: 35px 0;
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-price-label {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.plan-price-main-single {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5px;
+    line-height: 1;
+}
+
+.plan-price-main-single .currency {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ff6b35;
+}
+
+.plan-price-main-single .amount {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -2px;
+}
+
+.plan-price-main-single .period {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Features do plano */
+.plan-features-single {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.plan-features-single li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.plan-features-single li:last-child {
+    border-bottom: none;
+}
+
+.plan-features-single li:hover {
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.plan-features-single .check-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* CTA Button */
+.plan-cta-single {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 18px 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    margin: 30px 0 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.plan-cta-single:hover {
+    background: linear-gradient(135deg, #f7931e, #ff6b35);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+}
+
+/* Garantia */
+.plan-guarantee-single {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.guarantee-icon {
+    font-size: 1.2rem;
+}
+
+.guarantee-text {
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .pricing-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+
+    .plans-container-single {
+        padding: 10px;
+    }
+
+    .plan-card-single {
+        padding: 40px 30px;
+        border-width: 2px;
+    }
+
+    .plan-name-single {
+        font-size: 2rem;
+    }
+
+    .plan-price-main-single .currency {
+        font-size: 1.5rem;
+    }
+
+    .plan-price-main-single .amount {
+        font-size: 3rem;
+    }
+
+    .plan-price-main-single .period {
+        font-size: 1.2rem;
+    }
+
+    .plan-features-single li {
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+
+    .plan-cta-single {
+        font-size: 1.1rem;
+        padding: 16px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-card-single {
+        padding: 30px 20px;
+    }
+
+    .plan-badge-single {
+        font-size: 0.75rem;
+        padding: 6px 16px;
+    }
+
+    .plan-name-single {
+        font-size: 1.8rem;
+    }
+
+    .plan-tagline-single {
+        font-size: 1rem;
+    }
+
+    .plan-price-main-single .currency {
+        font-size: 1.3rem;
+    }
+
+    .plan-price-main-single .amount {
+        font-size: 2.5rem;
+    }
+
+    .plan-price-main-single .period {
+        font-size: 1rem;
+    }
+
+    .plan-features-single li {
+        font-size: 0.9rem;
+        gap: 10px;
+    }
+
+    .plan-cta-single {
+        font-size: 1rem;
+        padding: 14px 25px;
+    }
+
+    .plan-guarantee-single {
+        font-size: 0.85rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
