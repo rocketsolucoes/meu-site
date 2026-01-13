@@ -3818,51 +3818,90 @@ body {
     flex-shrink: 0;
 }
 
-/* Novos estilos para audience cards expandidos */
+/* Novos estilos para audience cards com expansão animada */
 .audience-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 107, 53, 0.2);
     border-radius: 12px;
-    padding: 30px 25px;
+    padding: 20px;
     transition: all 0.3s ease;
     text-align: left;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .audience-card:hover {
-    transform: translateY(-5px);
     border-color: rgba(255, 107, 53, 0.5);
     background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
 }
 
 .audience-card-header {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 20px;
+    position: relative;
 }
 
 .audience-icon {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1;
+    flex-shrink: 0;
 }
 
 .audience-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #ffffff;
     margin: 0;
+    flex: 1;
 }
 
+.audience-arrow {
+    font-size: 12px;
+    color: #ff6b35;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Estado compacto por padrão */
 .audience-card-body {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    margin-top: 0;
+}
+
+/* Expansão no hover (desktop) */
+@media (min-width: 769px) {
+    .audience-card:hover .audience-card-body {
+        max-height: 250px;
+        opacity: 1;
+        margin-top: 15px;
+    }
+    
+    .audience-card:hover .audience-arrow {
+        transform: rotate(180deg);
+    }
+}
+
+/* Expansão no click (mobile) - classe adicionada via JS */
+.audience-card.expanded .audience-card-body {
+    max-height: 250px;
+    opacity: 1;
     margin-top: 15px;
 }
 
+.audience-card.expanded .audience-arrow {
+    transform: rotate(180deg);
+}
+
 .audience-subtitle {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: #ff6b35;
-    margin: 0 0 12px 0;
+    margin: 0 0 10px 0;
 }
 
 .audience-list {
@@ -3872,10 +3911,10 @@ body {
 }
 
 .audience-list li {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     padding-left: 0;
 }
 

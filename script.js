@@ -146,3 +146,25 @@ window.addEventListener('load', function() {
     }
 });
 
+
+// Toggle de expansão dos audience cards no mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const audienceCards = document.querySelectorAll('.audience-card');
+    
+    audienceCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Apenas no mobile (largura menor que 769px)
+            if (window.innerWidth <= 768) {
+                // Toggle da classe 'expanded'
+                this.classList.toggle('expanded');
+                
+                // Fechar outros cards abertos (comportamento accordion)
+                audienceCards.forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.classList.remove('expanded');
+                    }
+                });
+            }
+        });
+    });
+});
