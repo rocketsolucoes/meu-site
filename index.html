@@ -904,7 +904,11 @@
                 
                 // Recalcular dimensões a cada navegação para garantir precisão
                 const cardWidth = cards[0].getBoundingClientRect().width;
-                const gap = 30;
+                
+                // Detectar gap real do CSS ao invés de usar valor fixo
+                const carouselStyles = window.getComputedStyle(carousel);
+                const gap = parseFloat(carouselStyles.gap) || 0;
+                
                 const cardsToSkip = currentIndex * cardsPerView;
                 const offset = cardsToSkip * (cardWidth + gap);
                 
