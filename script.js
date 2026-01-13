@@ -151,20 +151,32 @@ window.addEventListener('load', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const audienceCards = document.querySelectorAll('.audience-card');
     
+    function handleCardToggle(card) {
+        // Apenas no mobile (largura menor que 769px)
+        if (window.innerWidth <= 768) {
+            // Toggle da classe 'expanded'
+            card.classList.toggle('expanded');
+            
+            // Fechar outros cards abertos (comportamento accordion)
+            audienceCards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('expanded');
+                }
+            });
+        }
+    }
+    
     audienceCards.forEach(card => {
+        // Suporte para click (desktop/mobile)
         card.addEventListener('click', function(e) {
-            // Apenas no mobile (largura menor que 769px)
-            if (window.innerWidth <= 768) {
-                // Toggle da classe 'expanded'
-                this.classList.toggle('expanded');
-                
-                // Fechar outros cards abertos (comportamento accordion)
-                audienceCards.forEach(otherCard => {
-                    if (otherCard !== this) {
-                        otherCard.classList.remove('expanded');
-                    }
-                });
-            }
+            e.preventDefault();
+            handleCardToggle(this);
+        });
+        
+        // Suporte para touch (mobile)
+        card.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            handleCardToggle(this);
         });
     });
 });

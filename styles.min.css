@@ -3775,7 +3775,13 @@ body {
 /* 2. Seção de Depoimentos - Garantir que os cards apareçam em todas as páginas */
 .testimonials-carousel {
     display: flex !important;
-    overflow: visible !important;
+}
+
+/* Desktop: overflow visible para mostrar cards adjacentes */
+@media (min-width: 769px) {
+    .testimonials-carousel {
+        overflow: visible !important;
+    }
 }
 
 .testimonial-card-carousel {
