@@ -1691,17 +1691,20 @@ section {
 
 @media (max-width: 768px) {
     .testimonials-carousel-wrapper {
-        padding: 0 50px;
+        padding: 0 50px !important;
     }
     
     .testimonials-carousel {
         overflow: hidden !important;
+        gap: 0 !important;
     }
     
     .testimonial-card-carousel {
-        flex: 0 0 100%;
-        width: 100%;
-        max-width: 100%;
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        margin: 0 !important;
     }
     
     .carousel-btn {
