@@ -1527,6 +1527,7 @@ section {
 .testimonials-carousel {
     display: flex;
     overflow: hidden;
+    width: 100%;
     scroll-behavior: smooth;
     gap: 30px;
     transition: transform 0.5s ease-in-out;
@@ -3764,10 +3765,10 @@ body {
     text-align: center;
 }
 
-/* 2. Seção de Depoimentos - Garantir que os cards apareçam em todas as páginas */
+/* 2. Seção de Depoimentos - Mostrar apenas 4 cards completos por página */
 .testimonials-carousel {
     display: flex !important;
-    overflow: visible !important;
+    overflow: hidden !important;
 }
 
 .testimonial-card-carousel {
