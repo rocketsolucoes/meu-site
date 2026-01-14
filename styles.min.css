@@ -3799,6 +3799,8 @@ body {
 @media (min-width: 769px) {
     .testimonials-carousel-wrapper {
         overflow: hidden !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     
     .testimonials-carousel {
