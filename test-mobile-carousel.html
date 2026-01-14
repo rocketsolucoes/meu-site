@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Carrossel Mobile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        .debug-info {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 0, 0, 0.8);
+            padding: 10px;
+            font-size: 12px;
+            z-index: 9999;
+        }
+        
+        .testimonials-carousel-wrapper {
+            position: relative;
+            max-width: 100%;
+            margin: 100px auto 50px;
+            padding: 0 50px;
+        }
+        
+        .testimonials-carousel {
+            display: flex;
+            gap: 0;
+            overflow: hidden;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .testimonial-card-carousel {
+            flex: 0 0 100%;
+            width: 100%;
+            min-width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ff6b35;
+            border-radius: 15px;
+            padding: 25px;
+            min-height: 200px;
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #ff6b35;
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+        }
+        
+        .carousel-btn-prev {
+            left: 0;
+        }
+        
+        .carousel-btn-next {
+            right: 0;
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+        
+        .carousel-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+        }
+        
+        .carousel-indicator.active {
+            background: #ff6b35;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info" id="debug">Carregando...</div>
+    
+    <h1 style="text-align: center; margin-bottom: 20px;">Teste Carrossel Mobile</h1>
+    
+    <div class="testimonials-carousel-wrapper">
+        <div class="testimonials-carousel">
+            <div class="testimonial-card-carousel">
+                <h3>Card 1</h3>
+                <p>Primeiro depoimento</p>
+            </div>
+            <div class="testimonial-card-carousel">
+                <h3>Card 2</h3>
+                <p>Segundo depoimento</p>
+            </div>
+            <div class="testimonial-card-carousel">
+                <h3>Card 3</h3>
+                <p>Terceiro depoimento</p>
+            </div>
+            <div class="testimonial-card-carousel">
+                <h3>Card 4</h3>
+                <p>Quarto depoimento</p>
+            </div>
+            <div class="testimonial-card-carousel">
+                <h3>Card 5</h3>
+                <p>Quinto depoimento</p>
+            </div>
+        </div>
+        
+        <button class="carousel-btn carousel-btn-prev">‹</button>
+        <button class="carousel-btn carousel-btn-next">›</button>
+        
+        <div class="carousel-indicators"></div>
+    </div>
+    
+    <script>
+        const carousel = document.querySelector('.testimonials-carousel');
+        const cards = document.querySelectorAll('.testimonial-card-carousel');
+        const prevBtn = document.querySelector('.carousel-btn-prev');
+        const nextBtn = document.querySelector('.carousel-btn-next');
+        const indicatorsContainer = document.querySelector('.carousel-indicators');
+        const debugDiv = document.getElementById('debug');
+        
+        let currentIndex = 0;
+        const cardsPerView = 1;
+        const totalSlides = cards.length;
+        
+        function updateDebug() {
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            const carouselStyles = window.getComputedStyle(carousel);
+            const gap = parseFloat(carouselStyles.gap) || 0;
+            const cardsToSkip = currentIndex * cardsPerView;
+            const offset = cardsToSkip * (cardWidth + gap);
+            
+            debugDiv.innerHTML = `
+                Página: ${currentIndex + 1}/${totalSlides} | 
+                Card Width: ${cardWidth.toFixed(0)}px | 
+                Gap: ${gap}px | 
+                Offset: ${offset.toFixed(0)}px | 
+                Transform: ${carousel.style.transform}
+            `;
+        }
+        
+        function createIndicators() {
+            indicatorsContainer.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const indicator = document.createElement('div');
+                indicator.classList.add('carousel-indicator');
+                if (i === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => goToSlide(i));
+                indicatorsContainer.appendChild(indicator);
+            }
+        }
+        
+        function updateIndicators() {
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        function goToSlide(index) {
+            currentIndex = Math.max(0, Math.min(index, totalSlides - 1));
+            
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            const carouselStyles = window.getComputedStyle(carousel);
+            const gap = parseFloat(carouselStyles.gap) || 0;
+            
+            const cardsToSkip = currentIndex * cardsPerView;
+            const offset = cardsToSkip * (cardWidth + gap);
+            
+            carousel.style.transform = `translateX(-${offset}px)`;
+            updateIndicators();
+            updateDebug();
+        }
+        
+        function nextSlide() {
+            if (currentIndex < totalSlides - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+        
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                goToSlide(totalSlides - 1);
+            }
+        }
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        // Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                prevSlide();
+            }
+        });
+        
+        // Initialize
+        createIndicators();
+        goToSlide(0);
+        
+        // Update on resize
+        window.addEventListener('resize', () => {
+            goToSlide(currentIndex);
+        });
+    </script>
+</body>
+</html>
