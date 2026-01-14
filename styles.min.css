@@ -1698,6 +1698,7 @@ section {
     .testimonials-carousel {
         overflow: hidden !important;
         gap: 0 !important;
+        scroll-behavior: auto !important;
     }
     
     .testimonial-card-carousel {
