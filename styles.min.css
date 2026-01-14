@@ -1691,7 +1691,8 @@ section {
 
 @media (max-width: 768px) {
     .testimonials-carousel-wrapper {
-        padding: 0 50px !important;
+        padding: 0 !important;
+        margin: 50px 0 0 !important;
     }
     
     .testimonials-carousel {
@@ -1716,6 +1717,14 @@ section {
         width: 40px;
         height: 40px;
         font-size: 20px;
+    }
+    
+    .carousel-btn-prev {
+        left: 10px !important;
+    }
+    
+    .carousel-btn-next {
+        right: 10px !important;
     }
 }
 
