@@ -1701,6 +1701,7 @@ section {
     
     .testimonial-card-carousel {
         flex: 0 0 100% !important;
+        flex-shrink: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
@@ -3784,8 +3785,8 @@ body {
     }
 }
 
+/* Regras globais movidas para cima para não sobrescrever media queries */
 .testimonial-card-carousel {
-    flex-shrink: 0 !important;
     opacity: 1 !important;
     visibility: visible !important;
 }
