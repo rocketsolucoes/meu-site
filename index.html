@@ -1001,7 +1001,15 @@
             // Inicializar
             updateCardsPerView();
             createIndicators();
-            goToSlide(0); // Iniciar na primeira página
+            
+            // Forçar reset para primeira página
+            currentIndex = 0;
+            carousel.style.transform = 'translateX(0px)';
+            
+            // Aplicar posição inicial após pequeno delay
+            setTimeout(() => {
+                goToSlide(0);
+            }, 100);
         });
     </script>
 </body>
