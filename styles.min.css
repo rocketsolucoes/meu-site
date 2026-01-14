@@ -3505,6 +3505,38 @@ body {
     line-height: 1.6;
 }
 
+.pricing-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.15), rgba(255, 107, 53, 0.05));
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    border-radius: 50px;
+    padding: 14px 28px;
+    margin-top: 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ff6b35;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.highlight-icon {
+    width: 24px;
+    height: 24px;
+    color: #ff6b35;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(255, 107, 53, 0.4);
+    }
+}
+
 /* Wrapper do card */
 .pricing-card-wrapper {
     display: flex;
