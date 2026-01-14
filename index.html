@@ -912,37 +912,13 @@
                 const cardsToSkip = currentIndex * cardsPerView;
                 const offset = cardsToSkip * (cardWidth + gap);
                 
-                // APLICAR TRANSFORM PRIMEIRO
                 carousel.style.transform = `translateX(-${offset}px)`;
-                
-                // DEBUG: Mostrar informações no mobile DEPOIS de aplicar
-                if (window.innerWidth <= 768) {
-                    console.log('🔍 DEBUG Carrossel:', {
-                        página: currentIndex + 1,
-                        currentIndex: currentIndex,
-                        totalPáginas: totalSlides,
-                        cardsPerView: cardsPerView,
-                        cardWidth: cardWidth,
-                        gap: gap,
-                        cardsToSkip: cardsToSkip,
-                        offset: offset,
-                        transformAplicado: `translateX(-${offset}px)`,
-                        transformAtual: carousel.style.transform,
-                        windowWidth: window.innerWidth,
-                        carouselWidth: carousel.offsetWidth,
-                        totalCards: cards.length
-                    });
-                }
-                
                 updateIndicators();
             }
             
             // Próximo slide
             function nextSlide() {
                 const totalSlides = Math.ceil(cards.length / cardsPerView);
-                if (window.innerWidth <= 768) {
-                    console.log('➡️ nextSlide chamado - currentIndex antes:', currentIndex);
-                }
                 if (currentIndex < totalSlides - 1) {
                     goToSlide(currentIndex + 1);
                 } else {
@@ -998,6 +974,44 @@
                 goToSlide(currentIndex); // Manter a página atual
             });
             
+            // Autoplay
+            let autoplayInterval;
+            const autoplayDelay = 5000; // 5 segundos
+            
+            function startAutoplay() {
+                stopAutoplay(); // Limpar intervalo anterior
+                autoplayInterval = setInterval(() => {
+                    nextSlide();
+                }, autoplayDelay);
+            }
+            
+            function stopAutoplay() {
+                if (autoplayInterval) {
+                    clearInterval(autoplayInterval);
+                }
+            }
+            
+            // Pausar autoplay ao passar o mouse
+            carousel.addEventListener('mouseenter', stopAutoplay);
+            carousel.addEventListener('mouseleave', startAutoplay);
+            
+            // Pausar autoplay ao tocar (mobile)
+            carousel.addEventListener('touchstart', stopAutoplay);
+            carousel.addEventListener('touchend', () => {
+                setTimeout(startAutoplay, 3000); // Reiniciar após 3s
+            });
+            
+            // Reiniciar autoplay após navegação manual
+            prevBtn.addEventListener('click', () => {
+                stopAutoplay();
+                setTimeout(startAutoplay, 3000);
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                stopAutoplay();
+                setTimeout(startAutoplay, 3000);
+            });
+            
             // Inicializar
             updateCardsPerView();
             createIndicators();
@@ -1009,6 +1023,7 @@
             // Aplicar posição inicial após pequeno delay
             setTimeout(() => {
                 goToSlide(0);
+                startAutoplay(); // Iniciar autoplay
             }, 100);
         });
     </script>
