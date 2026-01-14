@@ -3805,6 +3805,14 @@ body {
     .testimonials-carousel {
         overflow: visible !important;
     }
+    
+    .carousel-btn-prev {
+        left: -60px !important;
+    }
+    
+    .carousel-btn-next {
+        right: -60px !important;
+    }
 }
 
 /* Regras globais movidas para cima para não sobrescrever media queries */
