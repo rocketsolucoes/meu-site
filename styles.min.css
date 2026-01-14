@@ -3518,7 +3518,12 @@ body {
     font-weight: 600;
     color: #22c55e;
     box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15);
-    white-space: nowrap;
+}
+
+@media (min-width: 769px) {
+    .pricing-highlight-green {
+        white-space: nowrap;
+    }
 }
 
 .pricing-highlight-green .highlight-icon {
