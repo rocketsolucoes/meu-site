@@ -1699,6 +1699,8 @@ section {
         overflow: hidden !important;
         gap: 0 !important;
         scroll-behavior: auto !important;
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
     }
     
     .testimonial-card-carousel {
