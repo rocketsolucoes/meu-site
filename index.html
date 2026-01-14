@@ -912,7 +912,10 @@
                 const cardsToSkip = currentIndex * cardsPerView;
                 const offset = cardsToSkip * (cardWidth + gap);
                 
-                // DEBUG: Mostrar informações no mobile
+                // APLICAR TRANSFORM PRIMEIRO
+                carousel.style.transform = `translateX(-${offset}px)`;
+                
+                // DEBUG: Mostrar informações no mobile DEPOIS de aplicar
                 if (window.innerWidth <= 768) {
                     console.log('🔍 DEBUG Carrossel:', {
                         página: currentIndex + 1,
@@ -923,14 +926,14 @@
                         gap: gap,
                         cardsToSkip: cardsToSkip,
                         offset: offset,
-                        transform: carousel.style.transform,
+                        transformAplicado: `translateX(-${offset}px)`,
+                        transformAtual: carousel.style.transform,
                         windowWidth: window.innerWidth,
                         carouselWidth: carousel.offsetWidth,
                         totalCards: cards.length
                     });
                 }
                 
-                carousel.style.transform = `translateX(-${offset}px)`;
                 updateIndicators();
             }
             
