@@ -3795,8 +3795,12 @@ body {
     display: flex !important;
 }
 
-/* Desktop: overflow visible para mostrar cards adjacentes */
+/* Desktop: overflow hidden no wrapper para mostrar apenas cards da página atual */
 @media (min-width: 769px) {
+    .testimonials-carousel-wrapper {
+        overflow: hidden !important;
+    }
+    
     .testimonials-carousel {
         overflow: visible !important;
     }
