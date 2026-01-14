@@ -3505,36 +3505,26 @@ body {
     line-height: 1.6;
 }
 
-.pricing-highlight {
-    display: inline-flex;
+.pricing-highlight-green {
+    display: flex;
     align-items: center;
     gap: 12px;
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.15), rgba(255, 107, 53, 0.05));
-    border: 2px solid rgba(255, 107, 53, 0.3);
-    border-radius: 50px;
-    padding: 14px 28px;
-    margin-top: 24px;
-    font-size: 1rem;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
+    border: 2px solid rgba(34, 197, 94, 0.4);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
     font-weight: 600;
-    color: #ff6b35;
-    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);
-    animation: pulse-glow 2s ease-in-out infinite;
+    color: #22c55e;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15);
 }
 
-.highlight-icon {
-    width: 24px;
-    height: 24px;
-    color: #ff6b35;
+.pricing-highlight-green .highlight-icon {
+    width: 22px;
+    height: 22px;
+    color: #22c55e;
     flex-shrink: 0;
-}
-
-@keyframes pulse-glow {
-    0%, 100% {
-        box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);
-    }
-    50% {
-        box-shadow: 0 4px 30px rgba(255, 107, 53, 0.4);
-    }
 }
 
 /* Wrapper do card */
