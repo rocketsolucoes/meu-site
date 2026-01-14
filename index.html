@@ -916,13 +916,17 @@
                 if (window.innerWidth <= 768) {
                     console.log('🔍 DEBUG Carrossel:', {
                         página: currentIndex + 1,
+                        currentIndex: currentIndex,
                         totalPáginas: totalSlides,
+                        cardsPerView: cardsPerView,
                         cardWidth: cardWidth,
                         gap: gap,
                         cardsToSkip: cardsToSkip,
                         offset: offset,
+                        transform: carousel.style.transform,
                         windowWidth: window.innerWidth,
-                        carouselWidth: carousel.offsetWidth
+                        carouselWidth: carousel.offsetWidth,
+                        totalCards: cards.length
                     });
                 }
                 
@@ -933,6 +937,9 @@
             // Próximo slide
             function nextSlide() {
                 const totalSlides = Math.ceil(cards.length / cardsPerView);
+                if (window.innerWidth <= 768) {
+                    console.log('➡️ nextSlide chamado - currentIndex antes:', currentIndex);
+                }
                 if (currentIndex < totalSlides - 1) {
                     goToSlide(currentIndex + 1);
                 } else {
