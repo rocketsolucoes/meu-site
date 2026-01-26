@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>ChatGPT Plus com Ativacao Blindada | Rocket Solucoes</title>
+    <meta name="description" content="Tenha o ChatGPT Plus ativo na sua propria conta OpenAI, com ativacao segura, assistida e monitorada. Sem bloqueios, sem dor de cabeca e sem pagamento em dolar.">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PV5GJGGF');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Favicon Tags -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+
+    <!-- Progressive Web App -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#10b981">
+
+    <!-- Meta tags adicionais -->
+    <meta name="application-name" content="Rocket Solucoes">
+    <meta name="apple-mobile-web-app-title" content="Rocket">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Preconnect para fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+
+    <style>
+        /* Reset e configuracoes globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
+            background-attachment: fixed;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding-top: 50px;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Fixo */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
+            z-index: 1001;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .promo-text {
+            font-size: 0.85rem;
+            color: #10b981;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(16, 185, 129, 0.1);
+            padding: 6px 16px;
+            border-radius: 25px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            display: inline-block;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 100px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at center top, rgba(16, 185, 129, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.15;
+            color: #ffffff;
+        }
+
+        .hero-title .highlight {
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+            margin-bottom: 40px;
+            color: #d1d5db;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .hero-image-placeholder {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed rgba(16, 185, 129, 0.3);
+            border-radius: 16px;
+            padding: 60px 40px;
+            margin: 40px auto;
+            max-width: 700px;
+            color: #9ca3af;
+            font-size: 0.95rem;
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #e5e7eb;
+        }
+
+        .trust-badge-icon {
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+            background: linear-gradient(135deg, #059669, #047857);
+        }
+
+        /* Secoes gerais */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.7;
+        }
+
+        .section-icon {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Secao Medo de Comprar */
+        .fear-section {
+            background: rgba(239, 68, 68, 0.03);
+            border-top: 1px solid rgba(239, 68, 68, 0.1);
+            border-bottom: 1px solid rgba(239, 68, 68, 0.1);
+        }
+
+        .fear-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .fear-card {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .fear-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .fear-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fca5a5;
+            margin-bottom: 10px;
+        }
+
+        .fear-card p {
+            color: #d1d5db;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .fear-solution {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .fear-solution h3 {
+            font-size: 1.4rem;
+            color: #10b981;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .fear-solution p {
+            color: #e5e7eb;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Secao Ativacao Blindada */
+        .blindada-section {
+            background: rgba(16, 185, 129, 0.02);
+        }
+
+        .blindada-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .blindada-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .blindada-text h3 {
+            font-size: 1.3rem;
+            color: #10b981;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .blindada-text p {
+            color: #d1d5db;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .blindada-list {
+            list-style: none;
+        }
+
+        .blindada-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            background: rgba(16, 185, 129, 0.08);
+            border-radius: 12px;
+            border-left: 3px solid #10b981;
+        }
+
+        .blindada-list-icon {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .blindada-list li span {
+            color: #e5e7eb;
+            font-size: 1rem;
+        }
+
+        .blindada-list li strong {
+            color: #ffffff;
+        }
+
+        /* Secao Beneficios */
+        .benefits-section {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+        }
+
+        .benefit-card-icon {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .benefit-card p {
+            color: #d1d5db;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        /* Secao Para Quem */
+        .audience-section {
+            padding: 80px 0;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .audience-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .audience-card:hover {
+            background: rgba(16, 185, 129, 0.08);
+            border-color: rgba(16, 185, 129, 0.3);
+            transform: translateX(5px);
+        }
+
+        .audience-card-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .audience-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        /* Secao Pricing */
+        .pricing-section {
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, transparent 100%);
+            padding: 100px 0;
+        }
+
+        .pricing-card-wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 24px;
+            padding: 45px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #10b981, #3b82f6);
+        }
+
+        .pricing-card-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 25px;
+        }
+
+        .pricing-card-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+
+        .pricing-card-price {
+            margin-bottom: 30px;
+        }
+
+        .pricing-card-price .currency {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #10b981;
+            vertical-align: top;
+        }
+
+        .pricing-card-price .amount {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .pricing-card-price .cents {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #10b981;
+            vertical-align: top;
+        }
+
+        .pricing-card-price .period {
+            display: block;
+            font-size: 1rem;
+            color: #9ca3af;
+            margin-top: 5px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 35px;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            color: #e5e7eb;
+            font-size: 1rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li .check {
+            color: #10b981;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .pricing-cta {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 18px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Secao Incluido */
+        .included-section {
+            padding: 60px 0;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .included-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .included-item-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .included-item p {
+            color: #e5e7eb;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Secao Comparacao */
+        .comparison-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .comparison-table {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 18px 25px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .comparison-table th {
+            background: rgba(16, 185, 129, 0.1);
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .comparison-table th:first-child {
+            border-radius: 20px 0 0 0;
+        }
+
+        .comparison-table th:last-child {
+            border-radius: 0 20px 0 0;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1));
+            color: #10b981;
+        }
+
+        .comparison-table td {
+            background: rgba(255, 255, 255, 0.03);
+            color: #d1d5db;
+        }
+
+        .comparison-table td:last-child {
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .comparison-table tr:last-child td:first-child {
+            border-radius: 0 0 0 20px;
+        }
+
+        .comparison-table tr:last-child td:last-child {
+            border-radius: 0 0 20px 0;
+        }
+
+        .comparison-check {
+            color: #10b981;
+            font-size: 1.3rem;
+        }
+
+        .comparison-cross {
+            color: #ef4444;
+            font-size: 1.3rem;
+        }
+
+        /* Secao O que Voce Recebe */
+        .receive-section {
+            padding: 80px 0;
+        }
+
+        .receive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .receive-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .receive-card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .receive-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .receive-card p {
+            color: #d1d5db;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* Secao Como Funciona */
+        .how-it-works-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 800px) {
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 50%;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .step-card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .step-card p {
+            color: #d1d5db;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Secao Garantia */
+        .guarantee-section {
+            padding: 80px 0;
+        }
+
+        .guarantee-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            border-radius: 24px;
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .guarantee-icon {
+            font-size: 4rem;
+            margin-bottom: 25px;
+        }
+
+        .guarantee-card h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #10b981;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-card p {
+            color: #e5e7eb;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Secao FAQ */
+        .faq-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 22px 25px;
+            background: transparent;
+            border: none;
+            text-align: left;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .faq-question:hover {
+            background: rgba(16, 185, 129, 0.08);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #10b981;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 25px 22px;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            color: #d1d5db;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Secao CTA Final */
+        .cta-final-section {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-final-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at center, rgba(16, 185, 129, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .cta-final-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-final-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .cta-final-subtitle {
+            color: #d1d5db;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .cta-final-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .cta-final-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #e5e7eb;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .footer .highlight-text {
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #25d366;
+            color: white;
+            padding: 14px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-card {
+                padding: 35px 25px;
+            }
+
+            .guarantee-card {
+                padding: 35px 25px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 14px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV5GJGGF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Cabecalho Fixo -->
+    <header class="sticky-header">
+        <div class="container">
+            <div class="header-content">
+                <span class="promo-text">ATIVACAO BLINDADA | SEGURANCA TOTAL | SUPORTE EM PORTUGUES</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>METODO EXCLUSIVO</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="highlight">ChatGPT Plus</span> com Ativacao Blindada
+                </h1>
+                <p class="hero-subtitle">
+                    Acesso total, estabilidade garantida e zero risco para sua conta
+                </p>
+                <p style="color: #d1d5db; font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px; line-height: 1.8;">
+                    Tenha o ChatGPT Plus ativo na sua propria conta OpenAI, com ativacao segura, assistida e monitorada — sem bloqueios, sem dor de cabeca e sem pagamento em dolar.
+                </p>
+
+                <div class="hero-image-placeholder">
+                    [INSERIR IMAGEM AQUI — Interface real do ChatGPT Plus ativo]
+                </div>
+
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">&#9200;</span>
+                        <span>Ativacao em ate 1 hora</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">&#127463;&#127479;</span>
+                        <span>Suporte humano em portugues</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-badge-icon">&#128737;</span>
+                        <span>Garantia total de 7 dias</span>
+                    </div>
+                </div>
+
+                <a href="#pricing" class="cta-button">Ativar com Seguranca — R$49,90/mes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: POR QUE AS PESSOAS TEM MEDO DE COMPRAR -->
+    <section class="fear-section">
+        <div class="container">
+            <div class="section-icon">&#10071;</div>
+            <h2 class="section-title">Por que as pessoas tem medo de comprar?</h2>
+            <p class="section-subtitle">
+                O problema nao e o ChatGPT Plus — e a forma como ele e oferecido por ai.
+            </p>
+
+            <div class="fear-grid">
+                <div class="fear-card">
+                    <div class="fear-card-icon">&#9888;</div>
+                    <h3>Ativacoes instaveis</h3>
+                    <p>Muitos servicos usam metodos automatizados que param de funcionar em dias ou semanas.</p>
+                </div>
+                <div class="fear-card">
+                    <div class="fear-card-icon">&#128683;</div>
+                    <h3>Contas bloqueadas</h3>
+                    <p>Ativacoes mal feitas podem resultar em suspensao da sua conta OpenAI.</p>
+                </div>
+                <div class="fear-card">
+                    <div class="fear-card-icon">&#128556;</div>
+                    <h3>Falta de suporte</h3>
+                    <p>Vendedores que somem apos a venda, deixando voce sem assistencia.</p>
+                </div>
+                <div class="fear-card">
+                    <div class="fear-card-icon">&#128272;</div>
+                    <h3>Inseguranca juridica</h3>
+                    <p>Preocupacao com a procedencia e legalidade do servico contratado.</p>
+                </div>
+            </div>
+
+            <div class="fear-solution">
+                <h3>A Ativacao Blindada existe para eliminar esses riscos.</h3>
+                <p>Criamos um processo seguro, manual e monitorado que garante estabilidade e tranquilidade para voce usar o ChatGPT Plus sem preocupacoes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: O QUE E A ATIVACAO BLINDADA PLUS -->
+    <section class="blindada-section">
+        <div class="container">
+            <div class="section-icon">&#128737;</div>
+            <h2 class="section-title">O que e a Ativacao Blindada Plus?</h2>
+
+            <div class="blindada-content">
+                <div class="blindada-text">
+                    <h3>Muito mais do que "ativar o Plus"</h3>
+                    <p>
+                        A Ativacao Blindada e um processo controlado, manual e assistido, realizado diretamente na sua conta OpenAI por nossa equipe especializada. Cada ativacao e feita individualmente, com verificacao de estabilidade e acompanhamento pos-venda.
+                    </p>
+
+                    <ul class="blindada-list">
+                        <li>
+                            <span class="blindada-list-icon">&#10060;</span>
+                            <span><strong>Nada de contas compartilhadas</strong> — o Plus e ativado na SUA conta, exclusivamente sua.</span>
+                        </li>
+                        <li>
+                            <span class="blindada-list-icon">&#10060;</span>
+                            <span><strong>Nada de automacoes instaveis</strong> — processo 100% manual e verificado.</span>
+                        </li>
+                        <li>
+                            <span class="blindada-list-icon">&#10060;</span>
+                            <span><strong>Nada de abandono pos-venda</strong> — suporte continuo via WhatsApp.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-image-placeholder">
+                    [INSERIR IMAGEM AQUI — Ilustracao de seguranca / verificacao / suporte]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: O QUE VOCE DESBLOQUEIA -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-icon">&#9889;</div>
+            <h2 class="section-title">O que voce desbloqueia com o ChatGPT Plus</h2>
+            <p class="section-subtitle">
+                Recursos exclusivos que transformam sua produtividade e criatividade.
+            </p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-card-icon">&#9889;</div>
+                    <h3>Respostas ate 5x mais rapidas</h3>
+                    <p>Acesso prioritario aos servidores da OpenAI. Sem filas, sem lentidao — mesmo nos horarios de pico.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-card-icon">&#129504;</div>
+                    <h3>Modelos avancados (GPT-5.2)</h3>
+                    <p>Acesso aos modelos mais inteligentes da OpenAI, com raciocinio profundo e precisao superior.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-card-icon">&#127912;</div>
+                    <h3>Geracao de imagens com IA</h3>
+                    <p>Crie imagens profissionais com DALL-E 3 diretamente no chat. Ilustracoes, logos, artes e muito mais.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-card-icon">&#128202;</div>
+                    <h3>Analise de arquivos e dados</h3>
+                    <p>Envie PDFs, planilhas e documentos para analise instantanea. Processa arquivos grandes e complexos.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-card-icon">&#129302;</div>
+                    <h3>Modo Agente</h3>
+                    <p>O ChatGPT executa pesquisas, interage com sites e entrega relatorios completos com um unico comando.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-card-icon">&#128269;</div>
+                    <h3>Deep Research</h3>
+                    <p>Pesquisas profundas e detalhadas com relatorios estruturados, referencias e raciocinio transparente.</p>
+                </div>
+            </div>
+
+            <div class="hero-image-placeholder" style="margin-top: 50px;">
+                [INSERIR IMAGEM AQUI — Recursos do ChatGPT em uso real]
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: PARA QUEM E ESTA ATIVACAO -->
+    <section class="audience-section">
+        <div class="container">
+            <div class="section-icon">&#128101;</div>
+            <h2 class="section-title">Para quem e esta ativacao</h2>
+            <p class="section-subtitle">
+                Profissionais que querem multiplicar sua produtividade com inteligencia artificial.
+            </p>
+
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <span class="audience-card-icon">&#128188;</span>
+                    <h3>Profissionais e Freelancers</h3>
+                </div>
+                <div class="audience-card">
+                    <span class="audience-card-icon">&#127970;</span>
+                    <h3>Empresas e Corporacoes</h3>
+                </div>
+                <div class="audience-card">
+                    <span class="audience-card-icon">&#9878;</span>
+                    <h3>Advogados e Consultores</h3>
+                </div>
+                <div class="audience-card">
+                    <span class="audience-card-icon">&#128241;</span>
+                    <h3>Social Media e Marketing</h3>
+                </div>
+                <div class="audience-card">
+                    <span class="audience-card-icon">&#128200;</span>
+                    <h3>Gestores de Trafego</h3>
+                </div>
+                <div class="audience-card">
+                    <span class="audience-card-icon">&#128187;</span>
+                    <h3>Desenvolvedores e TI</h3>
+                </div>
+                <div class="audience-card">
+                    <span class="audience-card-icon">&#128300;</span>
+                    <h3>Pesquisadores e Academicos</h3>
+                </div>
+                <div class="audience-card">
+                    <span class="audience-card-icon">&#127891;</span>
+                    <h3>Infoprodutores e Educadores</h3>
+                </div>
+            </div>
+
+            <div class="hero-image-placeholder" style="margin-top: 50px;">
+                [INSERIR IMAGEM AQUI — Pessoas trabalhando com notebook]
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: PRICING -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="pricing-card-wrapper">
+                <div class="pricing-card">
+                    <span class="pricing-card-badge">Mais Popular</span>
+                    <h3 class="pricing-card-title">ChatGPT Plus — Ativacao Blindada</h3>
+
+                    <div class="pricing-card-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">49</span>
+                        <span class="cents">,90</span>
+                        <span class="period">/ mes</span>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Ativacao manual e validada</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Plus ativo na sua conta OpenAI</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Monitoramento de estabilidade</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Suporte humano via WhatsApp</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Cancele quando quiser</span>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="pricing-cta" id="btn-assinar">Assinar Agora</a>
+
+                    <p style="margin-top: 20px; color: #9ca3af; font-size: 0.9rem;">
+                        &#128737; Garantia de reembolso em 7 dias
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: O QUE ESTA INCLUIDO -->
+    <section class="included-section">
+        <div class="container">
+            <div class="section-icon">&#128269;</div>
+            <h2 class="section-title">O que esta incluido neste valor</h2>
+
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="included-item-icon">&#129504;</div>
+                    <p>Modelos avancados (GPT-5.2)</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-item-icon">&#127912;</div>
+                    <p>Geracao de imagens com IA</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-item-icon">&#128202;</div>
+                    <p>Analise de arquivos e dados</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-item-icon">&#129302;</div>
+                    <p>Modo Agente</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-item-icon">&#128269;</div>
+                    <p>Deep Research</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-item-icon">&#9889;</div>
+                    <p>Respostas ate 5x mais rapidas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: COMPARACAO RAPIDA -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-icon">&#128161;</div>
+            <h2 class="section-title">Comparacao rapida</h2>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Recurso</th>
+                            <th>Plano Gratuito</th>
+                            <th>Ativacao Blindada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Velocidade</td>
+                            <td>Limitada</td>
+                            <td><span class="comparison-check">&#9889; Prioritaria</span></td>
+                        </tr>
+                        <tr>
+                            <td>Modelos avancados</td>
+                            <td><span class="comparison-cross">&#10060;</span></td>
+                            <td><span class="comparison-check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Upload de arquivos</td>
+                            <td>Limitado</td>
+                            <td><span class="comparison-check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Geracao de imagens</td>
+                            <td><span class="comparison-cross">&#10060;</span></td>
+                            <td><span class="comparison-check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Suporte humano</td>
+                            <td><span class="comparison-cross">&#10060;</span></td>
+                            <td><span class="comparison-check">&#10003;</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: GARANTIA INCLUSA -->
+    <section class="guarantee-section" style="padding-top: 40px;">
+        <div class="container">
+            <div class="guarantee-card">
+                <div class="guarantee-icon">&#128737;</div>
+                <h2>Garantia inclusa</h2>
+                <p>
+                    Voce esta protegido pela <strong>Garantia Blindagem Total — 7 Dias</strong>.<br><br>
+                    Se algo nao funcionar como esperado, seu dinheiro e devolvido integralmente. Sem perguntas, sem burocracia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: O QUE VOCE RECEBE -->
+    <section class="receive-section">
+        <div class="container">
+            <div class="section-icon">&#128230;</div>
+            <h2 class="section-title">O que voce recebe</h2>
+
+            <div class="receive-grid">
+                <div class="receive-card">
+                    <div class="receive-card-icon">&#128737;</div>
+                    <h3>Ativacao Blindada Plus</h3>
+                    <p>Ativacao manual, segura e verificada diretamente na sua conta OpenAI.</p>
+                </div>
+                <div class="receive-card">
+                    <div class="receive-card-icon">&#128200;</div>
+                    <h3>Monitoramento de Estabilidade</h3>
+                    <p>Acompanhamento por 30 dias para garantir que tudo funcione perfeitamente.</p>
+                </div>
+                <div class="receive-card">
+                    <div class="receive-card-icon">&#128172;</div>
+                    <h3>Suporte Humano Prioritario</h3>
+                    <p>Atendimento real via WhatsApp, em portugues, sempre que precisar.</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 40px; color: #9ca3af; font-size: 1.1rem;">
+                <strong style="color: #10b981;">Valor percebido:</strong> +R$200 | <strong style="color: #ffffff;">Voce paga:</strong> apenas R$49,90/mes
+            </p>
+        </div>
+    </section>
+
+    <!-- SECAO: COMO FUNCIONA A ATIVACAO -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <div class="section-icon">&#9881;</div>
+            <h2 class="section-title">Como funciona a ativacao</h2>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Escolha o plano e pague</h3>
+                    <p>Finalize o pagamento de forma segura via PIX ou cartao de credito.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Informe seu e-mail OpenAI</h3>
+                    <p>Envie o e-mail da sua conta OpenAI para nossa equipe via WhatsApp.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Plus ativo em ate 1 hora</h3>
+                    <p>Nossa equipe ativa e testa sua conta. Voce recebe confirmacao quando estiver pronto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: GARANTIA -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-card">
+                <div class="guarantee-icon">&#128737;</div>
+                <h2>Garantia Blindagem Total — 7 Dias</h2>
+                <p>
+                    Qualquer problema relacionado a ativacao gera reembolso integral. Nao importa o motivo — se voce nao ficar satisfeito nos primeiros 7 dias, devolvemos 100% do seu dinheiro.<br><br>
+                    Sem formularios, sem espera, sem burocracia. Basta nos chamar no WhatsApp.
+                </p>
+            </div>
+
+            <div class="hero-image-placeholder" style="margin-top: 40px; max-width: 500px;">
+                [INSERIR IMAGEM AQUI — Selo de garantia / seguranca]
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-icon">&#10067;</div>
+            <h2 class="section-title">Duvidas frequentes</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">Essa ativacao e legal?</button>
+                    <div class="faq-answer">
+                        <p>Sim. Voce esta contratando um servico de ativacao que e realizado diretamente na sua propria conta OpenAI. Voce continua sendo o unico dono e usuario da conta, com total controle sobre ela. Nao ha nenhuma ilegalidade no processo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Isso viola os termos da OpenAI?</button>
+                    <div class="faq-answer">
+                        <p>O uso da sua conta permanece absolutamente normal. Nao alteramos nenhum comportamento, nao acessamos seus dados ou conversas, e nao fazemos nada que modifique a forma como voce utiliza o ChatGPT. Voce usa exatamente como qualquer outro usuario Plus.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Minha conta corre risco de bloqueio?</button>
+                    <div class="faq-answer">
+                        <p>Nao. Nosso processo e 100% manual, individual e monitorado. Cada ativacao e feita com cuidado, seguindo procedimentos que garantem estabilidade. Alem disso, oferecemos monitoramento continuo e, caso ocorra qualquer instabilidade, corrigimos imediatamente ou devolvemos seu dinheiro.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Por que o preco e menor?</button>
+                    <div class="faq-answer">
+                        <p>Conseguimos oferecer um preco mais acessivel gracas a nossa estrutura operacional otimizada, escala de atendimento e foco no mercado brasileiro. Isso nos permite repassar economia para voce, mantendo a qualidade e o suporte em portugues.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Voces tem acesso a minha conta?</button>
+                    <div class="faq-answer">
+                        <p>Nao. Em nenhum momento acessamos suas conversas, arquivos, historico ou qualquer dado pessoal. A ativacao e feita de forma externa, e voce mantem total privacidade e controle da sua conta.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Posso cancelar quando quiser?</button>
+                    <div class="faq-answer">
+                        <p>Sim, sem nenhum tipo de fidelidade ou multa. Voce pode cancelar sua assinatura a qualquer momento, sem perguntas. Basta nos avisar pelo WhatsApp.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Funciona no celular e no computador?</button>
+                    <div class="faq-answer">
+                        <p>Sim! O ChatGPT Plus funciona em todos os seus dispositivos — no site oficial (chat.openai.com) e nos aplicativos para iOS e Android. Use onde e quando quiser.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">E se eu tiver problemas?</button>
+                    <div class="faq-answer">
+                        <p>Nosso suporte humano esta disponivel via WhatsApp para resolver qualquer questao. Alem disso, voce tem a Garantia Blindagem Total de 7 dias — se algo nao funcionar como esperado, devolvemos 100% do seu dinheiro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECAO: CTA FINAL -->
+    <section class="cta-final-section">
+        <div class="container">
+            <div class="cta-final-content">
+                <div class="section-icon">&#128640;</div>
+                <h2 class="cta-final-title">Pronto para usar o ChatGPT Plus com seguranca?</h2>
+                <p class="cta-final-subtitle">
+                    Ativacao rapida, suporte real em portugues e garantia de 7 dias. Comece agora e transforme sua produtividade.
+                </p>
+
+                <a href="#pricing" class="cta-button" style="font-size: 1.2rem; padding: 20px 50px;">
+                    ATIVAR CHATGPT PLUS COM SEGURANCA
+                </a>
+
+                <div class="cta-final-badges">
+                    <div class="cta-final-badge">
+                        <span>&#128737;</span>
+                        <span>Pagamento seguro</span>
+                    </div>
+                    <div class="cta-final-badge">
+                        <span>&#128172;</span>
+                        <span>Suporte via WhatsApp</span>
+                    </div>
+                    <div class="cta-final-badge">
+                        <span>&#10003;</span>
+                        <span>Garantia de 7 dias</span>
+                    </div>
+                </div>
+
+                <div class="hero-image-placeholder" style="margin-top: 50px; max-width: 600px;">
+                    [INSERIR IMAGEM AQUI — Selos de pagamento seguro, WhatsApp, garantia]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodape -->
+    <footer class="footer">
+        <div class="container">
+            <p>Fale com nosso suporte em caso de duvidas</p>
+            <p><span class="highlight-text">Satisfacao garantida ou seu dinheiro de volta</span></p>
+            <p style="margin-top: 15px;">Todos os direitos reservados. Rocket Solucoes</p>
+        </div>
+    </footer>
+
+    <!-- Botao Flutuante WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5531991044900?text=Ola! Tenho interesse na Ativacao Blindada do ChatGPT Plus. Pode me ajudar?" target="_blank" class="whatsapp-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.297"/>
+            </svg>
+            <span>Fale Conosco</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Fecha todos os outros
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+
+                // Abre o clicado (se nao estava ativo)
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // UTM Tracker
+        document.addEventListener('DOMContentLoaded', function() {
+            const paramsToKeep = [
+                'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
+                'gclid', 'gad_source', 'gad_campaignid', 'gbraid'
+            ];
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const capturedParams = new URLSearchParams();
+
+            urlParams.forEach((value, key) => {
+                if (paramsToKeep.includes(key)) {
+                    capturedParams.append(key, value);
+                }
+            });
+
+            const queryString = capturedParams.toString();
+
+            if (queryString) {
+                const checkoutLinks = document.querySelectorAll('a[href*="payment.solucoesrocket.com.br"], a[href*="kirvano.com"]');
+                checkoutLinks.forEach(link => {
+                    const originalHref = link.href;
+                    const separator = originalHref.includes('?') ? '&' : '?';
+                    link.href = originalHref + separator + queryString;
+                });
+            }
+        });
+    </script>
+
+    <!-- Modal de Planos de Assinatura -->
+    <link rel="stylesheet" href="subscription-modal.css">
+    <div id="subscription-modal" class="subscription-modal-overlay">
+        <div class="subscription-modal">
+            <!-- Botao Fechar -->
+            <button class="subscription-modal-close" aria-label="Fechar modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <!-- Cabecalho do Modal -->
+            <div class="subscription-modal-header">
+                <h2 class="subscription-modal-title">Escolha o Plano Ideal para Voce</h2>
+                <p class="subscription-modal-subtitle">Invista na sua produtividade com o ChatGPT Plus</p>
+            </div>
+
+            <!-- Container dos Planos -->
+            <div class="subscription-plans-container">
+
+                <!-- Plano Mensal -->
+                <div class="subscription-plan-card">
+                    <div class="subscription-plan-header">
+                        <h3 class="subscription-plan-name">Mensal</h3>
+                        <p class="subscription-plan-description">Ideal para comecar.</p>
+                    </div>
+                    <div class="subscription-plan-pricing">
+                        <div class="subscription-plan-price">
+                            <span class="subscription-currency">R$</span>
+                            <span class="subscription-amount">59</span>
+                            <span class="subscription-cents">,90</span>
+                        </div>
+                        <span class="subscription-period">/mes</span>
+                    </div>
+                    <ul class="subscription-plan-features">
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Acesso completo ao GPT-5.2
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Geracao de imagens DALL-E 3
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Suporte prioritario 24/7
+                        </li>
+                    </ul>
+                    <a href="https://payment.solucoesrocket.com.br/O51CCDC4B" class="subscription-plan-cta subscription-cta-outline">
+                        Assinar Agora
+                    </a>
+                </div>
+
+                <!-- Plano Trimestral -->
+                <div class="subscription-plan-card">
+                    <div class="subscription-plan-header">
+                        <h3 class="subscription-plan-name">Trimestral</h3>
+                        <p class="subscription-plan-description">Economize 12%!</p>
+                    </div>
+                    <div class="subscription-plan-pricing">
+                        <div class="subscription-plan-price">
+                            <span class="subscription-currency">R$</span>
+                            <span class="subscription-amount">157</span>
+                            <span class="subscription-cents">,90</span>
+                        </div>
+                        <span class="subscription-period">a cada 3 meses</span>
+                    </div>
+                    <div class="subscription-plan-equivalent">
+                        equivale a R$ 52,63/mes
+                    </div>
+                    <ul class="subscription-plan-features">
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Acesso completo ao GPT-5.2
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Geracao de imagens DALL-E 3
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Suporte prioritario 24/7
+                        </li>
+                    </ul>
+                    <a href="https://payment.solucoesrocket.com.br/OD847F439" class="subscription-plan-cta subscription-cta-outline">
+                        Assinar Agora
+                    </a>
+                </div>
+
+                <!-- Plano Anual (DESTAQUE) -->
+                <div class="subscription-plan-card subscription-plan-featured">
+                    <div class="subscription-plan-badge">MAIS POPULAR</div>
+                    <div class="subscription-plan-header">
+                        <h3 class="subscription-plan-name">Anual</h3>
+                        <p class="subscription-plan-description subscription-savings">Economize 45%!</p>
+                    </div>
+                    <div class="subscription-plan-pricing">
+                        <div class="subscription-plan-price">
+                            <span class="subscription-currency">R$</span>
+                            <span class="subscription-amount">397</span>
+                            <span class="subscription-cents">,90</span>
+                        </div>
+                        <span class="subscription-period">/ano</span>
+                    </div>
+                    <div class="subscription-plan-equivalent subscription-equivalent-featured">
+                        equivale a R$ 33,16/mes
+                    </div>
+                    <ul class="subscription-plan-features">
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Acesso completo ao GPT-5.2
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Geracao de imagens DALL-E 3
+                        </li>
+                        <li>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Suporte prioritario 24/7
+                        </li>
+                        <li>
+                            <svg class="check-icon featured-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <strong>Maior economia do ano</strong>
+                        </li>
+                    </ul>
+                    <a href="https://payment.solucoesrocket.com.br/O220E8BFB" class="subscription-plan-cta subscription-cta-featured">
+                        Assinar Agora
+                    </a>
+                    <div class="subscription-guarantee">
+                        <svg class="guarantee-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Garantia de 7 dias
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer do Modal -->
+            <div class="subscription-modal-footer">
+                <p class="subscription-footer-text">
+                    <svg class="lock-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                    </svg>
+                    Pagamento 100% seguro | Cancele quando quiser
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="subscription-modal.js"></script>
+</body>
+</html>
