@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     <title>ChatGPT Plus com Ativacao Blindada | Rocket Solucoes</title>
-    <meta name="description" content="Tenha o ChatGPT Plus ativo na sua propria conta OpenAI, com ativacao segura, assistida e monitorada. Sem bloqueios, sem dor de cabeca e sem pagamento em dolar.">
+    <meta name="description" content="Tenha o ChatGPT Plus ativado diretamente na sua propria conta do ChatGPT Plus, com ativacao segura e monitorada. Sem contas compartilhadas, sem bloqueios e sem pagamento em dolar.">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -42,7 +42,116 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
 
+    <!-- CSS de Preços -->
+    <link rel="stylesheet" href="subscription-modal.css">
+
     <style>
+        /* Sobrescrever variáveis de cor para tema verde */
+        :root {
+            --pricing-primary: #10b981;
+            --pricing-primary-dark: #059669;
+            --pricing-primary-light: #34d399;
+            --pricing-secondary: #10b981;
+        }
+
+        /* Adaptar seção de preços para tema escuro */
+        .pricing-section {
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, transparent 50%, transparent 100%) !important;
+        }
+
+        .pricing-section-title {
+            color: #ffffff !important;
+        }
+
+        .pricing-section-subtitle {
+            color: #9ca3af !important;
+        }
+
+        .pricing-plan-card {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .pricing-plan-card:hover {
+            border-color: rgba(16, 185, 129, 0.3) !important;
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15) !important;
+        }
+
+        .pricing-plan-featured {
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) !important;
+            border-color: rgba(16, 185, 129, 0.4) !important;
+            box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.3) !important;
+        }
+
+        .pricing-plan-featured:hover {
+            box-shadow: 0 25px 50px -15px rgba(16, 185, 129, 0.4) !important;
+        }
+
+        .pricing-plan-name {
+            color: #ffffff !important;
+        }
+
+        .pricing-plan-description {
+            color: #9ca3af !important;
+        }
+
+        .pricing-currency,
+        .pricing-amount,
+        .pricing-cents {
+            color: #ffffff !important;
+        }
+
+        .pricing-period {
+            color: #9ca3af !important;
+        }
+
+        .pricing-plan-equivalent {
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #d1d5db !important;
+        }
+
+        .pricing-equivalent-featured {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%) !important;
+            color: #10b981 !important;
+        }
+
+        .pricing-plan-features li {
+            color: #e5e7eb !important;
+            border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        .pricing-cta-outline {
+            border-color: #10b981 !important;
+            color: #10b981 !important;
+            background: transparent !important;
+        }
+
+        .pricing-cta-outline:hover {
+            background: rgba(16, 185, 129, 0.1) !important;
+            color: #10b981 !important;
+        }
+
+        .pricing-cta-featured {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4) !important;
+        }
+
+        .pricing-cta-featured:hover {
+            background: linear-gradient(135deg, #34d399 0%, #10b981 100%) !important;
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5) !important;
+        }
+
+        .pricing-section-footer {
+            color: #9ca3af !important;
+        }
+
+        .pricing-footer-text {
+            color: #9ca3af !important;
+        }
+
+        .lock-icon {
+            color: #10b981 !important;
+        }
         /* Reset e configuracoes globais */
         * {
             margin: 0;
@@ -470,201 +579,6 @@
             font-size: 1.05rem;
             font-weight: 600;
             color: #ffffff;
-        }
-
-        /* Secao Pricing */
-        .pricing-section {
-            background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, transparent 100%);
-            padding: 100px 0;
-        }
-
-        /* Grid de 3 colunas para os planos */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Card de preço individual */
-        .pricing-card {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            border-radius: 20px;
-            padding: 35px 30px;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
-        }
-
-        /* Destaque especial para o plano ANUAL */
-        .pricing-card.featured {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
-            border: 2px solid rgba(16, 185, 129, 0.4);
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
-        }
-
-        .pricing-card.featured:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.3);
-        }
-
-        /* Badge no topo do card */
-        .pricing-card-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            padding: 6px 20px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 25px;
-        }
-
-        /* Badge invisível para manter alinhamento */
-        .pricing-card-badge.invisible {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        /* Título do plano */
-        .pricing-card-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 25px;
-        }
-
-        /* Container do preço */
-        .pricing-card-price {
-            margin-bottom: 20px;
-        }
-
-        .pricing-card-price .currency {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #10b981;
-            vertical-align: top;
-        }
-
-        .pricing-card-price .amount {
-            font-size: 4rem;
-            font-weight: 800;
-            color: #ffffff;
-            line-height: 1;
-        }
-
-        .pricing-card-price .cents {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #10b981;
-            vertical-align: top;
-        }
-
-        .pricing-card-price .period {
-            display: block;
-            font-size: 1rem;
-            color: #9ca3af;
-            margin-top: 5px;
-        }
-
-        /* Valor mensal equivalente (para planos trimestral e anual) */
-        .pricing-card-equivalent {
-            font-size: 0.95rem;
-            color: #d1d5db;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        /* Descrição/Economia */
-        .pricing-card-description {
-            font-size: 1rem;
-            color: #10b981;
-            font-weight: 600;
-            margin-bottom: 30px;
-            min-height: 25px;
-        }
-
-        .pricing-card.featured .pricing-card-description {
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        /* Lista de features */
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 35px;
-            text-align: left;
-        }
-
-        .pricing-features li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            color: #e5e7eb;
-            font-size: 1rem;
-        }
-
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-features li .check {
-            color: #10b981;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        /* Botão CTA */
-        .pricing-cta {
-            display: block;
-            width: 100%;
-            background: transparent;
-            color: #10b981;
-            padding: 18px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.15rem;
-            transition: all 0.3s ease;
-            border: 2px solid #10b981;
-            cursor: pointer;
-        }
-
-        .pricing-cta:hover {
-            background: rgba(16, 185, 129, 0.1);
-            transform: translateY(-2px);
-        }
-
-        /* Botão CTA do plano em destaque (sólido) */
-        .pricing-card.featured .pricing-cta {
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            border: none;
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
-        }
-
-        .pricing-card.featured .pricing-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
-            background: linear-gradient(135deg, #059669, #047857);
-        }
-
-        /* Texto de garantia */
-        .pricing-guarantee {
-            margin-top: 20px;
-            color: #9ca3af;
-            font-size: 0.9rem;
         }
 
         /* Secao Incluido */
@@ -1095,16 +1009,6 @@
                 align-items: center;
             }
 
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-                max-width: 500px;
-            }
-
-            .pricing-card {
-                padding: 30px 25px;
-            }
-
             .guarantee-card {
                 padding: 35px 25px;
             }
@@ -1356,10 +1260,10 @@
                     <span class="highlight">ChatGPT Plus</span> com Ativacao Blindada
                 </h1>
                 <p class="hero-subtitle">
-                    Acesso total, estabilidade garantida e zero risco para sua conta
+                    Ativado diretamente na sua propria conta do ChatGPT Plus — voce mantem controle total
                 </p>
                 <p style="color: #d1d5db; font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px; line-height: 1.8;">
-                    Tenha o ChatGPT Plus ativo na sua propria conta OpenAI, com ativacao segura, assistida e monitorada — sem bloqueios, sem dor de cabeca e sem pagamento em dolar.
+                    Tenha o ChatGPT Plus ativado na sua propria conta, sem contas compartilhadas e sem precisarmos acessar seus dados. Ativacao segura, monitorada e sem pagamento em dolar.
                 </p>
 
                 <div class="hero-image-placeholder">
@@ -1404,7 +1308,7 @@
                 <div class="fear-card">
                     <div class="fear-card-icon">&#128683;</div>
                     <h3>Contas bloqueadas</h3>
-                    <p>Ativacoes mal feitas podem resultar em suspensao da sua conta OpenAI.</p>
+                    <p>Ativacoes mal feitas podem resultar em suspensao da sua conta do ChatGPT Plus.</p>
                 </div>
                 <div class="fear-card">
                     <div class="fear-card-icon">&#128556;</div>
@@ -1420,7 +1324,7 @@
 
             <div class="fear-solution">
                 <h3>A Ativacao Blindada existe para eliminar esses riscos.</h3>
-                <p>Criamos um processo seguro, manual e monitorado que garante estabilidade e tranquilidade para voce usar o ChatGPT Plus sem preocupacoes.</p>
+                <p>Criamos um processo seguro, manual e monitorado que garante estabilidade e tranquilidade para voce usar o ChatGPT Plus sem preocupacoes. <strong style="color: #10b981;">Ativado diretamente na sua conta — voce mantem controle total.</strong></p>
             </div>
         </div>
     </section>
@@ -1435,21 +1339,25 @@
                 <div class="blindada-text">
                     <h3>Muito mais do que "ativar o Plus"</h3>
                     <p>
-                        A Ativacao Blindada e um processo controlado, manual e assistido, realizado diretamente na sua conta OpenAI por nossa equipe especializada. Cada ativacao e feita individualmente, com verificacao de estabilidade e acompanhamento pos-venda.
+                        A Ativacao Blindada e um processo controlado, manual e assistido, realizado diretamente na sua propria conta do ChatGPT Plus. Voce mantem seu historico, preferencias e controle total — nos nao precisamos acessar sua conta para fazer a ativacao.
                     </p>
 
                     <ul class="blindada-list">
                         <li>
-                            <span class="blindada-list-icon">&#10060;</span>
-                            <span><strong>Nada de contas compartilhadas</strong> — o Plus e ativado na SUA conta, exclusivamente sua.</span>
+                            <span class="blindada-list-icon">&#10004;</span>
+                            <span><strong>Ativacao direta na sua conta do ChatGPT Plus</strong> — o Plus e ativado na SUA conta, exclusivamente sua.</span>
                         </li>
                         <li>
-                            <span class="blindada-list-icon">&#10060;</span>
-                            <span><strong>Nada de automacoes instaveis</strong> — processo 100% manual e verificado.</span>
+                            <span class="blindada-list-icon">&#10004;</span>
+                            <span><strong>Sem contas compartilhadas</strong> — voce nao recebe uma conta pronta, usa a sua propria.</span>
                         </li>
                         <li>
-                            <span class="blindada-list-icon">&#10060;</span>
-                            <span><strong>Nada de abandono pos-venda</strong> — suporte continuo via WhatsApp.</span>
+                            <span class="blindada-list-icon">&#10004;</span>
+                            <span><strong>Nao precisamos acessar sua conta</strong> — processo seguro que nao exige seus dados de login.</span>
+                        </li>
+                        <li>
+                            <span class="blindada-list-icon">&#10004;</span>
+                            <span><strong>Voce mantem controle total</strong> — historico, conversas e preferencias continuam seus.</span>
                         </li>
                     </ul>
                 </div>
@@ -1474,12 +1382,12 @@
                 <div class="benefit-card">
                     <div class="benefit-card-icon">&#9889;</div>
                     <h3>Respostas ate 5x mais rapidas</h3>
-                    <p>Acesso prioritario aos servidores da OpenAI. Sem filas, sem lentidao — mesmo nos horarios de pico.</p>
+                    <p>Acesso prioritario aos servidores do ChatGPT Plus. Sem filas, sem lentidao — mesmo nos horarios de pico.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-card-icon">&#129504;</div>
                     <h3>Modelos avancados (GPT-5.2)</h3>
-                    <p>Acesso aos modelos mais inteligentes da OpenAI, com raciocinio profundo e precisao superior.</p>
+                    <p>Acesso aos modelos mais inteligentes do ChatGPT, com raciocinio profundo e precisao superior.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-card-icon">&#127912;</div>
@@ -1515,7 +1423,8 @@
             <div class="section-icon">&#128101;</div>
             <h2 class="section-title">Para quem e esta ativacao</h2>
             <p class="section-subtitle">
-                Profissionais que querem multiplicar sua produtividade com inteligencia artificial.
+                Profissionais que querem multiplicar sua produtividade com inteligencia artificial.<br>
+                <span style="color: #10b981; font-weight: 600;">Ativado diretamente na sua conta — nada de contas compartilhadas.</span>
             </p>
 
             <div class="audience-grid">
@@ -1562,146 +1471,162 @@
     <!-- SECAO: PRICING -->
     <section id="pricing" class="pricing-section">
         <div class="container">
-            <div class="section-icon">&#128142;</div>
-            <h2 class="section-title">Planos flexiveis para acelerar seus resultados</h2>
-            <p class="section-subtitle">Escolha o plano ideal e economize com assinaturas de longo prazo.</p>
+            <!-- Cabeçalho da Seção -->
+            <div class="pricing-section-header">
+                <span class="pricing-label">PREÇOS</span>
+                <h2 class="pricing-section-title">Escolha o Plano Ideal para Você</h2>
+                <p class="pricing-section-subtitle">Invista na sua produtividade com o ChatGPT Plus</p>
+            </div>
 
-            <div class="pricing-grid">
-                
-                <!-- PLANO MENSAL -->
-                <div class="pricing-card">
-                    <span class="pricing-card-badge invisible">Placeholder</span>
-                    <h3 class="pricing-card-title">Mensal</h3>
+            <!-- Container dos Planos -->
+            <div class="pricing-plans-container">
 
-                    <div class="pricing-card-price">
-                        <span class="currency">R$</span>
-                        <span class="amount">59</span>
-                        <span class="cents">,90</span>
-                        <span class="period">/ mes</span>
+                <!-- Plano Mensal -->
+                <div class="pricing-plan-card">
+                    <div class="pricing-plan-header">
+                        <h3 class="pricing-plan-name">Mensal</h3>
+                        <p class="pricing-plan-description">Ideal para começar.</p>
                     </div>
-
-                    <p class="pricing-card-description">Ideal para comecar com flexibilidade.</p>
-
-                    <ul class="pricing-features">
+                    <div class="pricing-plan-pricing">
+                        <div class="pricing-plan-price">
+                            <span class="pricing-currency">R$</span>
+                            <span class="pricing-amount">59</span>
+                            <span class="pricing-cents">,90</span>
+                        </div>
+                        <span class="pricing-period">/mês</span>
+                    </div>
+                    <ul class="pricing-plan-features">
                         <li>
-                            <span class="check">&#10003;</span>
-                            <span>Ativacao manual e validada</span>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Ativação manual e validada
                         </li>
                         <li>
-                            <span class="check">&#10003;</span>
-                            <span>Plus ativo na sua conta OpenAI</span>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Ativação segura na sua conta do ChatGPT Plus
                         </li>
                         <li>
-                            <span class="check">&#10003;</span>
-                            <span>Monitoramento de estabilidade</span>
-                        </li>
-                        <li>
-                            <span class="check">&#10003;</span>
-                            <span>Suporte humano via WhatsApp</span>
-                        </li>
-                        <li>
-                            <span class="check">&#10003;</span>
-                            <span>Cancele quando quiser</span>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Suporte humano via WhatsApp
                         </li>
                     </ul>
-
-                    <a href="https://payment.solucoesrocket.com.br/O51CCDC4B" class="pricing-cta">Assinar Agora</a>
-
-                    <p class="pricing-guarantee">
-                        &#128737; Garantia de reembolso em 7 dias
-                    </p>
+                    <a href="https://payment.solucoesrocket.com.br/O51CCDC4B" class="pricing-plan-cta pricing-cta-outline">
+                        Assinar Agora
+                    </a>
                 </div>
 
-                <!-- PLANO TRIMESTRAL -->
-                <div class="pricing-card">
-                    <span class="pricing-card-badge invisible">Placeholder</span>
-                    <h3 class="pricing-card-title">Trimestral</h3>
-
-                    <div class="pricing-card-price">
-                        <span class="currency">R$</span>
-                        <span class="amount">157</span>
-                        <span class="cents">,90</span>
-                        <span class="period">a cada 3 meses</span>
+                <!-- Plano Trimestral -->
+                <div class="pricing-plan-card">
+                    <div class="pricing-plan-header">
+                        <h3 class="pricing-plan-name">Trimestral</h3>
+                        <p class="pricing-plan-description">Economize 12%!</p>
                     </div>
-
-                    <p class="pricing-card-equivalent">Apenas R$ 52,63 por mes</p>
-                    <p class="pricing-card-description">Economize 12%!</p>
-
-                    <ul class="pricing-features">
+                    <div class="pricing-plan-pricing">
+                        <div class="pricing-plan-price">
+                            <span class="pricing-currency">R$</span>
+                            <span class="pricing-amount">157</span>
+                            <span class="pricing-cents">,90</span>
+                        </div>
+                        <span class="pricing-period">a cada 3 meses</span>
+                    </div>
+                    <div class="pricing-plan-equivalent">
+                        equivale a R$ 52,63/mês
+                    </div>
+                    <ul class="pricing-plan-features">
                         <li>
-                            <span class="check">&#10003;</span>
-                            <span>Ativacao manual e validada</span>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Ativação manual e validada
                         </li>
                         <li>
-                            <span class="check">&#10003;</span>
-                            <span>Plus ativo na sua conta OpenAI</span>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Ativação segura na sua conta do ChatGPT Plus
                         </li>
                         <li>
-                            <span class="check">&#10003;</span>
-                            <span>Monitoramento de estabilidade</span>
-                        </li>
-                        <li>
-                            <span class="check">&#10003;</span>
-                            <span>Suporte humano via WhatsApp</span>
-                        </li>
-                        <li>
-                            <span class="check">&#10003;</span>
-                            <span>Cancele quando quiser</span>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Suporte humano via WhatsApp
                         </li>
                     </ul>
-
-                    <a href="https://payment.solucoesrocket.com.br/OD847F439" class="pricing-cta">Assinar Agora</a>
-
-                    <p class="pricing-guarantee">
-                        &#128737; Garantia de reembolso em 7 dias
-                    </p>
+                    <a href="https://payment.solucoesrocket.com.br/OD847F439" class="pricing-plan-cta pricing-cta-outline">
+                        Assinar Agora
+                    </a>
                 </div>
 
-                <!-- PLANO ANUAL (DESTAQUE) -->
-                <div class="pricing-card featured">
-                    <span class="pricing-card-badge">Mais Popular</span>
-                    <h3 class="pricing-card-title">Anual</h3>
-
-                    <div class="pricing-card-price">
-                        <span class="currency">R$</span>
-                        <span class="amount">397</span>
-                        <span class="cents">,90</span>
-                        <span class="period">/ ano</span>
+                <!-- Plano Anual (DESTAQUE) -->
+                <div class="pricing-plan-card pricing-plan-featured">
+                    <div class="pricing-plan-badge">MAIS POPULAR</div>
+                    <div class="pricing-plan-header">
+                        <h3 class="pricing-plan-name">Anual</h3>
+                        <p class="pricing-plan-description pricing-savings">Economize 45%!</p>
                     </div>
-
-                    <p class="pricing-card-equivalent">Apenas R$ 33,16 por mes</p>
-                    <p class="pricing-card-description">Aproveite 45% de desconto!</p>
-
-                    <ul class="pricing-features">
+                    <div class="pricing-plan-pricing">
+                        <div class="pricing-plan-price">
+                            <span class="pricing-currency">R$</span>
+                            <span class="pricing-amount">397</span>
+                            <span class="pricing-cents">,90</span>
+                        </div>
+                        <span class="pricing-period">/ano</span>
+                    </div>
+                    <div class="pricing-plan-equivalent pricing-equivalent-featured">
+                        equivale a R$ 33,16/mês
+                    </div>
+                    <ul class="pricing-plan-features">
                         <li>
-                            <span class="check">&#10003;</span>
-                            <span>Ativacao manual e validada</span>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Ativação manual e validada
                         </li>
                         <li>
-                            <span class="check">&#10003;</span>
-                            <span>Plus ativo na sua conta OpenAI</span>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Ativação segura na sua conta do ChatGPT Plus
                         </li>
                         <li>
-                            <span class="check">&#10003;</span>
-                            <span>Monitoramento de estabilidade</span>
+                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Suporte humano via WhatsApp
                         </li>
                         <li>
-                            <span class="check">&#10003;</span>
-                            <span>Suporte humano via WhatsApp</span>
-                        </li>
-                        <li>
-                            <span class="check">&#10003;</span>
-                            <span>Cancele quando quiser</span>
+                            <svg class="check-icon featured-check" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <strong>Maior economia do ano</strong>
                         </li>
                     </ul>
-
-                    <a href="https://payment.solucoesrocket.com.br/O220E8BFB" class="pricing-cta">Assinar Agora</a>
-
-                    <p class="pricing-guarantee">
-                        &#128737; Garantia de reembolso em 7 dias
-                    </p>
+                    <a href="https://payment.solucoesrocket.com.br/O220E8BFB" class="pricing-plan-cta pricing-cta-featured">
+                        Assinar Agora
+                    </a>
+                    <div class="pricing-guarantee">
+                        <svg class="guarantee-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Garantia de 7 dias
+                    </div>
                 </div>
 
+            </div>
+
+            <!-- Footer da Seção -->
+            <div class="pricing-section-footer">
+                <p class="pricing-footer-text">
+                    <svg class="lock-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                    </svg>
+                    Pagamento 100% seguro | Cancele quando quiser
+                </p>
             </div>
         </div>
     </section>
@@ -2022,7 +1947,7 @@
                 <div class="receive-card">
                     <div class="receive-card-icon">&#128737;</div>
                     <h3>Ativacao Blindada Plus</h3>
-                    <p>Ativacao manual, segura e verificada diretamente na sua conta OpenAI.</p>
+                    <p>Ativacao manual, segura e verificada diretamente na sua conta do ChatGPT Plus.</p>
                 </div>
                 <div class="receive-card">
                     <div class="receive-card-icon">&#128200;</div>
@@ -2056,8 +1981,8 @@
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h3>Informe seu e-mail OpenAI</h3>
-                    <p>Envie o e-mail da sua conta OpenAI para nossa equipe via WhatsApp.</p>
+                    <h3>Informe seu e-mail do ChatGPT Plus</h3>
+                    <p>Envie o e-mail da sua conta do ChatGPT Plus para nossa equipe via WhatsApp.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
@@ -2094,16 +2019,23 @@
 
             <div class="faq-list">
                 <div class="faq-item">
-                    <button class="faq-question">Essa ativacao e legal?</button>
+                    <button class="faq-question">Vou usar minha conta ou recebo uma conta nova?</button>
                     <div class="faq-answer">
-                        <p>Sim. Voce esta contratando um servico de ativacao que e realizado diretamente na sua propria conta OpenAI. Voce continua sendo o unico dono e usuario da conta, com total controle sobre ela. Nao ha nenhuma ilegalidade no processo.</p>
+                        <p>Voce usa a sua propria conta do ChatGPT Plus. O Plus e ativado diretamente nela — nao fornecemos contas prontas, compartilhadas ou acessos temporarios. Voce mantem seu historico, conversas, preferencias e controle total. A conta continua sendo exclusivamente sua.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question">Isso viola os termos da OpenAI?</button>
+                    <button class="faq-question">Essa ativacao e legal?</button>
                     <div class="faq-answer">
-                        <p>O uso da sua conta permanece absolutamente normal. Nao alteramos nenhum comportamento, nao acessamos seus dados ou conversas, e nao fazemos nada que modifique a forma como voce utiliza o ChatGPT. Voce usa exatamente como qualquer outro usuario Plus.</p>
+                        <p>Sim. Voce esta contratando um servico de ativacao que e realizado diretamente na sua propria conta do ChatGPT Plus. Voce continua sendo o unico dono e usuario da conta, com total controle sobre ela. Nao ha nenhuma ilegalidade no processo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Voces precisam acessar minha conta?</button>
+                    <div class="faq-answer">
+                        <p>Nao. Em nenhum momento precisamos acessar sua conta para fazer a ativacao. Nao solicitamos sua senha nem acessamos suas conversas, arquivos ou historico. O processo e feito de forma externa e segura — voce mantem total privacidade e controle.</p>
                     </div>
                 </div>
 
@@ -2115,16 +2047,9 @@
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question">Por que o preco e menor?</button>
+                    <button class="faq-question">Por que o preco e mais acessivel?</button>
                     <div class="faq-answer">
                         <p>Conseguimos oferecer um preco mais acessivel gracas a nossa estrutura operacional otimizada, escala de atendimento e foco no mercado brasileiro. Isso nos permite repassar economia para voce, mantendo a qualidade e o suporte em portugues.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Voces tem acesso a minha conta?</button>
-                    <div class="faq-answer">
-                        <p>Nao. Em nenhum momento acessamos suas conversas, arquivos, historico ou qualquer dado pessoal. A ativacao e feita de forma externa, e voce mantem total privacidade e controle da sua conta.</p>
                     </div>
                 </div>
 
@@ -2138,7 +2063,7 @@
                 <div class="faq-item">
                     <button class="faq-question">Funciona no celular e no computador?</button>
                     <div class="faq-answer">
-                        <p>Sim! O ChatGPT Plus funciona em todos os seus dispositivos — no site oficial (chat.openai.com) e nos aplicativos para iOS e Android. Use onde e quando quiser.</p>
+                        <p>Sim! O ChatGPT Plus funciona em todos os seus dispositivos — no site oficial do ChatGPT e nos aplicativos para iOS e Android. Use onde e quando quiser.</p>
                     </div>
                 </div>
 
@@ -2159,7 +2084,8 @@
                 <div class="section-icon">&#128640;</div>
                 <h2 class="cta-final-title">Pronto para usar o ChatGPT Plus com seguranca?</h2>
                 <p class="cta-final-subtitle">
-                    Ativacao rapida, suporte real em portugues e garantia de 7 dias. Comece agora e transforme sua produtividade.
+                    Ativacao direta na sua propria conta do ChatGPT Plus — voce mantem controle total.<br>
+                    Suporte real em portugues e garantia de 7 dias. Comece agora e transforme sua produtividade.
                 </p>
 
                 <a href="#pricing" class="cta-button" style="font-size: 1.2rem; padding: 20px 50px;">
@@ -2436,177 +2362,5 @@
         }, 100);
     </script>
 
-    <!-- Modal de Planos de Assinatura -->
-    <link rel="stylesheet" href="subscription-modal.css">
-    <div id="subscription-modal" class="subscription-modal-overlay">
-        <div class="subscription-modal">
-            <!-- Botao Fechar -->
-            <button class="subscription-modal-close" aria-label="Fechar modal">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-
-            <!-- Cabecalho do Modal -->
-            <div class="subscription-modal-header">
-                <h2 class="subscription-modal-title">Escolha o Plano Ideal para Voce</h2>
-                <p class="subscription-modal-subtitle">Invista na sua produtividade com o ChatGPT Plus</p>
-            </div>
-
-            <!-- Container dos Planos -->
-            <div class="subscription-plans-container">
-
-                <!-- Plano Mensal -->
-                <div class="subscription-plan-card">
-                    <div class="subscription-plan-header">
-                        <h3 class="subscription-plan-name">Mensal</h3>
-                        <p class="subscription-plan-description">Ideal para comecar.</p>
-                    </div>
-                    <div class="subscription-plan-pricing">
-                        <div class="subscription-plan-price">
-                            <span class="subscription-currency">R$</span>
-                            <span class="subscription-amount">59</span>
-                            <span class="subscription-cents">,90</span>
-                        </div>
-                        <span class="subscription-period">/mes</span>
-                    </div>
-                    <ul class="subscription-plan-features">
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Acesso completo ao GPT-5.2
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Geracao de imagens DALL-E 3
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Suporte prioritario 24/7
-                        </li>
-                    </ul>
-                    <a href="https://payment.solucoesrocket.com.br/O51CCDC4B" class="subscription-plan-cta subscription-cta-outline">
-                        Assinar Agora
-                    </a>
-                </div>
-
-                <!-- Plano Trimestral -->
-                <div class="subscription-plan-card">
-                    <div class="subscription-plan-header">
-                        <h3 class="subscription-plan-name">Trimestral</h3>
-                        <p class="subscription-plan-description">Economize 12%!</p>
-                    </div>
-                    <div class="subscription-plan-pricing">
-                        <div class="subscription-plan-price">
-                            <span class="subscription-currency">R$</span>
-                            <span class="subscription-amount">157</span>
-                            <span class="subscription-cents">,90</span>
-                        </div>
-                        <span class="subscription-period">a cada 3 meses</span>
-                    </div>
-                    <div class="subscription-plan-equivalent">
-                        equivale a R$ 52,63/mes
-                    </div>
-                    <ul class="subscription-plan-features">
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Acesso completo ao GPT-5.2
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Geracao de imagens DALL-E 3
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Suporte prioritario 24/7
-                        </li>
-                    </ul>
-                    <a href="https://payment.solucoesrocket.com.br/OD847F439" class="subscription-plan-cta subscription-cta-outline">
-                        Assinar Agora
-                    </a>
-                </div>
-
-                <!-- Plano Anual (DESTAQUE) -->
-                <div class="subscription-plan-card subscription-plan-featured">
-                    <div class="subscription-plan-badge">MAIS POPULAR</div>
-                    <div class="subscription-plan-header">
-                        <h3 class="subscription-plan-name">Anual</h3>
-                        <p class="subscription-plan-description subscription-savings">Economize 45%!</p>
-                    </div>
-                    <div class="subscription-plan-pricing">
-                        <div class="subscription-plan-price">
-                            <span class="subscription-currency">R$</span>
-                            <span class="subscription-amount">397</span>
-                            <span class="subscription-cents">,90</span>
-                        </div>
-                        <span class="subscription-period">/ano</span>
-                    </div>
-                    <div class="subscription-plan-equivalent subscription-equivalent-featured">
-                        equivale a R$ 33,16/mes
-                    </div>
-                    <ul class="subscription-plan-features">
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Acesso completo ao GPT-5.2
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Geracao de imagens DALL-E 3
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Suporte prioritario 24/7
-                        </li>
-                        <li>
-                            <svg class="check-icon featured-check" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <strong>Maior economia do ano</strong>
-                        </li>
-                    </ul>
-                    <a href="https://payment.solucoesrocket.com.br/O220E8BFB" class="subscription-plan-cta subscription-cta-featured">
-                        Assinar Agora
-                    </a>
-                    <div class="subscription-guarantee">
-                        <svg class="guarantee-icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                        </svg>
-                        Garantia de 7 dias
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Footer do Modal -->
-            <div class="subscription-modal-footer">
-                <p class="subscription-footer-text">
-                    <svg class="lock-icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
-                    </svg>
-                    Pagamento 100% seguro | Cancele quando quiser
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <script src="subscription-modal.js"></script>
 </body>
 </html>
