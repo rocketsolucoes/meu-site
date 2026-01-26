@@ -1234,17 +1234,20 @@
 
         /* Bloco de Recursos do ChatGPT Plus nos Cards de Preços */
         .chatgpt-plus-features {
-            margin-top: 24px;
-            padding: 20px;
-            background: rgba(16, 185, 129, 0.05) !important;
-            border: 1px solid rgba(16, 185, 129, 0.2) !important;
-            border-radius: 12px;
+            margin-top: 28px;
+            margin-bottom: 28px;
+            padding: 24px 20px;
+            background: rgba(16, 185, 129, 0.06) !important;
+            border: 1px solid rgba(16, 185, 129, 0.25) !important;
+            border-radius: 16px;
             transition: all 0.3s ease;
         }
 
         .chatgpt-plus-features:hover {
-            background: rgba(16, 185, 129, 0.08) !important;
-            border-color: rgba(16, 185, 129, 0.3) !important;
+            background: rgba(16, 185, 129, 0.1) !important;
+            border-color: rgba(16, 185, 129, 0.35) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
         }
 
         .chatgpt-plus-features .features-title {
@@ -1285,20 +1288,24 @@
 
         /* Ajuste para o card em destaque (Anual) */
         .pricing-plan-featured .chatgpt-plus-features {
-            background: rgba(16, 185, 129, 0.08) !important;
-            border-color: rgba(16, 185, 129, 0.3) !important;
+            background: rgba(16, 185, 129, 0.1) !important;
+            border-color: rgba(16, 185, 129, 0.35) !important;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
         }
 
         .pricing-plan-featured .chatgpt-plus-features:hover {
-            background: rgba(16, 185, 129, 0.12) !important;
-            border-color: rgba(16, 185, 129, 0.4) !important;
+            background: rgba(16, 185, 129, 0.15) !important;
+            border-color: rgba(16, 185, 129, 0.45) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
         }
 
         /* Responsividade */
         @media (max-width: 768px) {
             .chatgpt-plus-features {
-                padding: 16px;
-                margin-top: 20px;
+                padding: 20px 16px;
+                margin-top: 24px;
+                margin-bottom: 24px;
             }
             
             .chatgpt-plus-features .features-title {
@@ -1312,8 +1319,9 @@
 
         @media (max-width: 480px) {
             .chatgpt-plus-features {
-                padding: 14px;
-                margin-top: 16px;
+                padding: 18px 14px;
+                margin-top: 20px;
+                margin-bottom: 20px;
             }
             
             .chatgpt-plus-features .features-title {
