@@ -1049,18 +1049,20 @@
             position: relative;
             max-width: 1400px;
             margin: 50px auto 0;
-            padding: 0 60px 20px;
+            padding: 20px 60px 20px;
             min-height: 350px;
-            overflow: hidden;
+            overflow: visible;
         }
 
         .testimonials-carousel {
             display: flex;
-            overflow: visible;
+            overflow: hidden;
             scroll-behavior: smooth;
             gap: 30px;
             transition: transform 0.5s ease-in-out;
             will-change: transform;
+            padding: 10px 0;
+            margin: -10px 0;
         }
 
         .testimonial-card-carousel {
@@ -1155,38 +1157,9 @@
 
         /* Botões do Carrossel */
         .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: linear-gradient(135deg, #10b981, #059669);
-            border: none;
-            color: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            font-size: 24px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            display: none;
         }
 
-        .carousel-btn:hover {
-            background: linear-gradient(135deg, #059669, #047857);
-            transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
-        }
-
-        .carousel-btn-prev {
-            left: 0;
-        }
-
-        .carousel-btn-next {
-            right: 0;
-        }
 
         /* Indicadores */
         .carousel-indicators {
@@ -1222,31 +1195,19 @@
 
         @media (max-width: 768px) {
             .testimonials-carousel-wrapper {
-                padding: 0 50px;
+                padding: 20px 20px;
             }
-            
+
             .testimonial-card-carousel {
                 flex: 0 0 100%;
                 width: 100%;
                 max-width: 100%;
             }
-            
-            .carousel-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-            }
         }
 
         @media (max-width: 480px) {
             .testimonials-carousel-wrapper {
-                padding: 0 40px;
-            }
-            
-            .carousel-btn {
-                width: 35px;
-                height: 35px;
-                font-size: 18px;
+                padding: 20px 10px;
             }
         }
 
