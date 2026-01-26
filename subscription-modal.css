@@ -1,0 +1,578 @@
+/* ========================================
+   MODAL DE PLANOS DE ASSINATURA - CSS
+   Estilos otimizados para conversao
+   ======================================== */
+
+/* === VARIAVEIS DE CORES === */
+:root {
+    --subscription-primary: #7c3aed;
+    --subscription-primary-dark: #6d28d9;
+    --subscription-primary-light: #8b5cf6;
+    --subscription-secondary: #10b981;
+    --subscription-accent: #f59e0b;
+    --subscription-dark: #1f2937;
+    --subscription-gray: #6b7280;
+    --subscription-light-gray: #f3f4f6;
+    --subscription-white: #ffffff;
+    --subscription-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --subscription-shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* === OVERLAY DO MODAL === */
+.subscription-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.subscription-modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* === MODAL PRINCIPAL === */
+.subscription-modal {
+    background: var(--subscription-white);
+    border-radius: 20px;
+    max-width: 1100px;
+    width: 100%;
+    max-height: 95vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: var(--subscription-shadow);
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.subscription-modal-overlay.active .subscription-modal {
+    transform: scale(1) translateY(0);
+}
+
+/* === BOTAO FECHAR === */
+.subscription-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: var(--subscription-light-gray);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--subscription-gray);
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.subscription-modal-close:hover {
+    background: var(--subscription-dark);
+    color: var(--subscription-white);
+    transform: rotate(90deg);
+}
+
+.subscription-modal-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* === CABECALHO DO MODAL === */
+.subscription-modal-header {
+    text-align: center;
+    padding: 40px 40px 30px;
+    background: linear-gradient(135deg, #faf5ff 0%, #f0fdf4 100%);
+    border-radius: 20px 20px 0 0;
+}
+
+.subscription-modal-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--subscription-dark);
+    margin: 0 0 10px;
+    letter-spacing: -0.5px;
+}
+
+.subscription-modal-subtitle {
+    font-size: 1.1rem;
+    color: var(--subscription-gray);
+    margin: 0;
+}
+
+/* === CONTAINER DOS PLANOS === */
+.subscription-plans-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 30px 40px 40px;
+    align-items: stretch;
+}
+
+/* === CARD DE PLANO === */
+.subscription-plan-card {
+    background: var(--subscription-white);
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.subscription-plan-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--subscription-shadow-sm);
+}
+
+/* === PLANO EM DESTAQUE (ANUAL) === */
+.subscription-plan-featured {
+    border: 3px solid var(--subscription-primary);
+    background: linear-gradient(180deg, #faf5ff 0%, var(--subscription-white) 100%);
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px -15px rgba(124, 58, 237, 0.3);
+}
+
+.subscription-plan-featured:hover {
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: 0 25px 50px -15px rgba(124, 58, 237, 0.4);
+}
+
+/* === SELO "MAIS POPULAR" === */
+.subscription-plan-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--subscription-primary) 0%, var(--subscription-primary-dark) 100%);
+    color: var(--subscription-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+    white-space: nowrap;
+}
+
+/* === CABECALHO DO PLANO === */
+.subscription-plan-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.subscription-plan-featured .subscription-plan-header {
+    padding-top: 20px;
+}
+
+.subscription-plan-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--subscription-dark);
+    margin: 0 0 8px;
+}
+
+.subscription-plan-description {
+    font-size: 0.95rem;
+    color: var(--subscription-gray);
+    margin: 0;
+}
+
+.subscription-savings {
+    color: var(--subscription-secondary);
+    font-weight: 600;
+}
+
+/* === PRECO DO PLANO === */
+.subscription-plan-pricing {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subscription-plan-price {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 1;
+}
+
+.subscription-currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--subscription-dark);
+    margin-top: 8px;
+    margin-right: 2px;
+}
+
+.subscription-amount {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--subscription-dark);
+    letter-spacing: -2px;
+}
+
+.subscription-cents {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--subscription-dark);
+    margin-top: 8px;
+}
+
+.subscription-period {
+    font-size: 1rem;
+    color: var(--subscription-gray);
+    display: block;
+    margin-top: 4px;
+}
+
+/* === PRECO EQUIVALENTE MENSAL === */
+.subscription-plan-equivalent {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--subscription-gray);
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    background: var(--subscription-light-gray);
+    border-radius: 8px;
+}
+
+.subscription-equivalent-featured {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+    color: var(--subscription-primary-dark);
+    font-weight: 600;
+}
+
+/* === LISTA DE RECURSOS === */
+.subscription-plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    flex-grow: 1;
+}
+
+.subscription-plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    color: var(--subscription-dark);
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.subscription-plan-features li:last-child {
+    border-bottom: none;
+}
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--subscription-secondary);
+}
+
+.featured-check {
+    color: var(--subscription-primary);
+}
+
+/* === BOTOES CTA === */
+.subscription-plan-cta {
+    display: block;
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Botao Outline (Mensal e Trimestral) */
+.subscription-cta-outline {
+    background: transparent;
+    border: 2px solid var(--subscription-dark);
+    color: var(--subscription-dark);
+}
+
+.subscription-cta-outline:hover {
+    background: var(--subscription-dark);
+    color: var(--subscription-white);
+    transform: translateY(-2px);
+}
+
+/* Botao Destaque (Anual) */
+.subscription-cta-featured {
+    background: linear-gradient(135deg, var(--subscription-primary) 0%, var(--subscription-primary-dark) 100%);
+    border: 2px solid transparent;
+    color: var(--subscription-white);
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+.subscription-cta-featured:hover {
+    background: linear-gradient(135deg, var(--subscription-primary-light) 0%, var(--subscription-primary) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
+}
+
+/* === GARANTIA === */
+.subscription-guarantee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--subscription-secondary);
+    font-weight: 500;
+}
+
+.subscription-guarantee .guarantee-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* === FOOTER DO MODAL === */
+.subscription-modal-footer {
+    text-align: center;
+    padding: 20px 40px 30px;
+    border-top: 1px solid #f3f4f6;
+}
+
+.subscription-footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--subscription-gray);
+    margin: 0;
+}
+
+.lock-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--subscription-secondary);
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .subscription-modal {
+        max-width: 95%;
+    }
+
+    .subscription-plans-container {
+        gap: 20px;
+        padding: 25px 30px 35px;
+    }
+
+    .subscription-amount {
+        font-size: 3.5rem;
+    }
+}
+
+/* Tablets menores e Mobile landscape */
+@media (max-width: 900px) {
+    .subscription-plans-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .subscription-plan-card {
+        padding: 24px 20px;
+    }
+
+    /* Reorganizar a ordem dos cards para mobile */
+    .subscription-plan-featured {
+        order: -1;
+        transform: none;
+    }
+
+    .subscription-plan-featured:hover {
+        transform: translateY(-4px);
+    }
+
+    .subscription-modal-header {
+        padding: 30px 25px 20px;
+    }
+
+    .subscription-modal-title {
+        font-size: 1.5rem;
+    }
+
+    .subscription-modal-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .subscription-modal-overlay {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .subscription-modal {
+        border-radius: 16px;
+        max-height: none;
+        margin-top: 10px;
+    }
+
+    .subscription-modal-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .subscription-modal-header {
+        padding: 25px 20px 15px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .subscription-modal-title {
+        font-size: 1.35rem;
+        padding-right: 30px;
+    }
+
+    .subscription-modal-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .subscription-plans-container {
+        padding: 20px 16px 25px;
+        gap: 16px;
+    }
+
+    .subscription-plan-card {
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+
+    .subscription-plan-badge {
+        font-size: 0.7rem;
+        padding: 6px 16px;
+        top: -12px;
+    }
+
+    .subscription-plan-name {
+        font-size: 1.3rem;
+    }
+
+    .subscription-amount {
+        font-size: 3rem;
+    }
+
+    .subscription-currency,
+    .subscription-cents {
+        font-size: 1.25rem;
+    }
+
+    .subscription-plan-features li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+
+    .subscription-plan-cta {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    .subscription-modal-footer {
+        padding: 15px 20px 20px;
+    }
+
+    .subscription-footer-text {
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile muito pequeno */
+@media (max-width: 380px) {
+    .subscription-modal-title {
+        font-size: 1.2rem;
+    }
+
+    .subscription-amount {
+        font-size: 2.5rem;
+    }
+
+    .subscription-plan-card {
+        padding: 16px 14px;
+    }
+}
+
+/* === ANIMACOES === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Prevenir scroll do body quando modal aberto */
+body.subscription-modal-open {
+    overflow: hidden;
+}
+
+/* === ACESSIBILIDADE === */
+.subscription-modal-close:focus,
+.subscription-plan-cta:focus {
+    outline: 3px solid var(--subscription-primary);
+    outline-offset: 2px;
+}
+
+/* Melhorar contraste para modo de alto contraste */
+@media (prefers-contrast: high) {
+    .subscription-plan-card {
+        border-width: 3px;
+    }
+
+    .subscription-cta-outline {
+        border-width: 3px;
+    }
+}
+
+/* Respeitar preferencia de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    .subscription-modal-overlay,
+    .subscription-modal,
+    .subscription-plan-card,
+    .subscription-modal-close,
+    .subscription-plan-cta {
+        transition: none;
+    }
+}
