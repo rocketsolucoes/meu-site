@@ -484,19 +484,29 @@
             padding: 100px 0;
         }
 
-        .pricing-card-wrapper {
-            max-width: 500px;
+        /* Grid de 3 colunas para os planos */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
+        /* Card de preço individual */
         .pricing-card {
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
             border: 2px solid rgba(16, 185, 129, 0.3);
             border-radius: 24px;
-            padding: 45px 40px;
+            padding: 40px 30px;
             text-align: center;
             position: relative;
-            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.2);
         }
 
         .pricing-card::before {
@@ -507,8 +517,28 @@
             right: 0;
             height: 4px;
             background: linear-gradient(90deg, #10b981, #3b82f6);
+            border-radius: 24px 24px 0 0;
         }
 
+        /* Destaque especial para o plano ANUAL */
+        .pricing-card.featured {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.08));
+            border: 3px solid rgba(16, 185, 129, 0.5);
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(16, 185, 129, 0.3);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 25px 60px rgba(16, 185, 129, 0.4);
+        }
+
+        .pricing-card.featured::before {
+            height: 5px;
+            background: linear-gradient(90deg, #10b981, #059669);
+        }
+
+        /* Badge no topo do card */
         .pricing-card-badge {
             display: inline-block;
             background: linear-gradient(135deg, #10b981, #059669);
@@ -522,6 +552,13 @@
             margin-bottom: 25px;
         }
 
+        /* Badge invisível para manter alinhamento */
+        .pricing-card-badge.invisible {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Título do plano */
         .pricing-card-title {
             font-size: 1.6rem;
             font-weight: 700;
@@ -529,8 +566,9 @@
             margin-bottom: 25px;
         }
 
+        /* Container do preço */
         .pricing-card-price {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .pricing-card-price .currency {
@@ -561,6 +599,29 @@
             margin-top: 5px;
         }
 
+        /* Valor mensal equivalente (para planos trimestral e anual) */
+        .pricing-card-equivalent {
+            font-size: 0.95rem;
+            color: #d1d5db;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        /* Descrição/Economia */
+        .pricing-card-description {
+            font-size: 1rem;
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 30px;
+            min-height: 25px;
+        }
+
+        .pricing-card.featured .pricing-card-description {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        /* Lista de features */
         .pricing-features {
             list-style: none;
             margin-bottom: 35px;
@@ -587,25 +648,46 @@
             flex-shrink: 0;
         }
 
+        /* Botão CTA */
         .pricing-cta {
             display: block;
             width: 100%;
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
+            background: transparent;
+            color: #10b981;
             padding: 18px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.15rem;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
-            border: none;
+            border: 2px solid #10b981;
             cursor: pointer;
         }
 
         .pricing-cta:hover {
+            background: rgba(16, 185, 129, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Botão CTA do plano em destaque (sólido) */
+        .pricing-card.featured .pricing-cta {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            border: none;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .pricing-card.featured .pricing-cta:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+            background: linear-gradient(135deg, #059669, #047857);
+        }
+
+        /* Texto de garantia */
+        .pricing-guarantee {
+            margin-top: 20px;
+            color: #9ca3af;
+            font-size: 0.9rem;
         }
 
         /* Secao Incluido */
@@ -1036,8 +1118,30 @@
                 align-items: center;
             }
 
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                max-width: 500px;
+            }
+
             .pricing-card {
                 padding: 35px 25px;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-5px);
+            }
+
+            .pricing-card-title {
+                font-size: 1.4rem;
+            }
+
+            .pricing-card-price .amount {
+                font-size: 3.5rem;
             }
 
             .guarantee-card {
@@ -1285,17 +1389,25 @@
     <!-- SECAO: PRICING -->
     <section id="pricing" class="pricing-section">
         <div class="container">
-            <div class="pricing-card-wrapper">
+            <div class="section-icon">&#128142;</div>
+            <h2 class="section-title">Planos flexiveis para acelerar seus resultados</h2>
+            <p class="section-subtitle">Escolha o plano ideal e economize com assinaturas de longo prazo.</p>
+
+            <div class="pricing-grid">
+                
+                <!-- PLANO MENSAL -->
                 <div class="pricing-card">
-                    <span class="pricing-card-badge">Mais Popular</span>
-                    <h3 class="pricing-card-title">ChatGPT Plus — Ativacao Blindada</h3>
+                    <span class="pricing-card-badge invisible">Placeholder</span>
+                    <h3 class="pricing-card-title">Mensal</h3>
 
                     <div class="pricing-card-price">
                         <span class="currency">R$</span>
-                        <span class="amount">49</span>
+                        <span class="amount">59</span>
                         <span class="cents">,90</span>
                         <span class="period">/ mes</span>
                     </div>
+
+                    <p class="pricing-card-description">Ideal para comecar com flexibilidade.</p>
 
                     <ul class="pricing-features">
                         <li>
@@ -1320,12 +1432,103 @@
                         </li>
                     </ul>
 
-                    <a href="#" class="pricing-cta" id="btn-assinar">Assinar Agora</a>
+                    <a href="https://payment.solucoesrocket.com.br/O51CCDC4B" class="pricing-cta">Assinar Agora</a>
 
-                    <p style="margin-top: 20px; color: #9ca3af; font-size: 0.9rem;">
+                    <p class="pricing-guarantee">
                         &#128737; Garantia de reembolso em 7 dias
                     </p>
                 </div>
+
+                <!-- PLANO TRIMESTRAL -->
+                <div class="pricing-card">
+                    <span class="pricing-card-badge invisible">Placeholder</span>
+                    <h3 class="pricing-card-title">Trimestral</h3>
+
+                    <div class="pricing-card-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">157</span>
+                        <span class="cents">,90</span>
+                        <span class="period">a cada 3 meses</span>
+                    </div>
+
+                    <p class="pricing-card-equivalent">Apenas R$ 52,63 por mes</p>
+                    <p class="pricing-card-description">Economize 12%!</p>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Ativacao manual e validada</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Plus ativo na sua conta OpenAI</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Monitoramento de estabilidade</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Suporte humano via WhatsApp</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Cancele quando quiser</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://payment.solucoesrocket.com.br/OD847F439" class="pricing-cta">Assinar Agora</a>
+
+                    <p class="pricing-guarantee">
+                        &#128737; Garantia de reembolso em 7 dias
+                    </p>
+                </div>
+
+                <!-- PLANO ANUAL (DESTAQUE) -->
+                <div class="pricing-card featured">
+                    <span class="pricing-card-badge">Mais Popular</span>
+                    <h3 class="pricing-card-title">Anual</h3>
+
+                    <div class="pricing-card-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">397</span>
+                        <span class="cents">,90</span>
+                        <span class="period">/ ano</span>
+                    </div>
+
+                    <p class="pricing-card-equivalent">Apenas R$ 33,16 por mes</p>
+                    <p class="pricing-card-description">Aproveite 45% de desconto!</p>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Ativacao manual e validada</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Plus ativo na sua conta OpenAI</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Monitoramento de estabilidade</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Suporte humano via WhatsApp</span>
+                        </li>
+                        <li>
+                            <span class="check">&#10003;</span>
+                            <span>Cancele quando quiser</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://payment.solucoesrocket.com.br/O220E8BFB" class="pricing-cta">Assinar Agora</a>
+
+                    <p class="pricing-guarantee">
+                        &#128737; Garantia de reembolso em 7 dias
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
