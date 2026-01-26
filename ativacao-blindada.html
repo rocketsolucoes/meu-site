@@ -641,12 +641,15 @@
             max-width: 800px;
             margin: 0 auto;
             border-radius: 20px;
-            overflow: hidden;
+            overflow-x: auto;
+            overflow-y: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            -webkit-overflow-scrolling: touch;
         }
 
         .comparison-table table {
             width: 100%;
+            min-width: 500px;
             border-collapse: collapse;
         }
 
@@ -1014,27 +1017,150 @@
 
         /* Responsivo */
         @media (max-width: 768px) {
+            body {
+                padding-top: 45px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-btn {
+                padding: 12px 18px;
+                font-size: 0.9rem;
+            }
+
+            .whatsapp-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+
             .hero {
-                padding: 60px 0 80px;
+                padding: 50px 0 70px;
+            }
+
+            .hero-badge {
+                font-size: 0.85rem;
+                padding: 6px 16px;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                margin-bottom: 30px;
             }
 
             section {
-                padding: 60px 0;
+                padding: 50px 0;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+                margin-bottom: 15px;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                margin-bottom: 40px;
             }
 
             .trust-badges {
                 flex-direction: column;
-                align-items: center;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .trust-badge {
+                justify-content: center;
+                padding: 14px 20px;
+                width: 100%;
+            }
+
+            .cta-button {
+                font-size: 1.05rem;
+                padding: 16px 35px;
+                width: 100%;
+                max-width: 400px;
             }
 
             .guarantee-card {
-                padding: 35px 25px;
+                padding: 30px 20px;
+            }
+
+            .comparison-table {
+                font-size: 0.85rem;
             }
 
             .comparison-table th,
             .comparison-table td {
-                padding: 14px 15px;
-                font-size: 0.9rem;
+                padding: 12px 10px;
+                font-size: 0.85rem;
+            }
+
+            .fear-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .fear-card {
+                padding: 20px;
+            }
+
+            .fear-solution {
+                padding: 25px 20px;
+            }
+
+            .blindada-content {
+                gap: 30px;
+            }
+
+            .blindada-list li {
+                padding: 12px 15px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .benefit-card {
+                padding: 25px 20px;
+            }
+
+            .pricing-plans-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .pricing-plan-card {
+                max-width: 100%;
+            }
+
+            .how-it-works-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .step-card {
+                padding: 25px 20px;
+            }
+
+            .faq-item {
+                padding: 20px 18px;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+                padding-right: 35px;
+            }
+
+            .faq-answer {
+                padding: 15px 0 0;
+                font-size: 0.95rem;
             }
         }
 
@@ -1206,8 +1332,89 @@
         }
 
         @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+
+            .whatsapp-float {
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .whatsapp-btn {
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+
+            .whatsapp-btn svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .hero {
+                padding: 40px 0 60px;
+            }
+
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 6px 14px;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 14px 30px;
+            }
+
+            .fear-card,
+            .benefit-card,
+            .step-card {
+                padding: 18px 16px;
+            }
+
+            .fear-solution {
+                padding: 22px 18px;
+            }
+
+            .guarantee-card {
+                padding: 25px 18px;
+            }
+
+            .pricing-plan-card {
+                padding: 25px 18px;
+            }
+
+            .faq-item {
+                padding: 18px 15px;
+            }
+
+            .faq-question {
+                font-size: 0.95rem;
+            }
+
+            .faq-answer {
+                font-size: 0.9rem;
+            }
+
             .testimonials-carousel-wrapper {
                 padding: 20px 10px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px 8px;
+                font-size: 0.8rem;
             }
         }
 
@@ -2274,10 +2481,8 @@
         // Carrossel de Depoimentos
         const carousel = document.querySelector('.testimonials-carousel');
         const cards = document.querySelectorAll('.testimonial-card-carousel');
-        const prevBtn = document.querySelector('.carousel-btn-prev');
-        const nextBtn = document.querySelector('.carousel-btn-next');
         const indicatorsContainer = document.querySelector('.carousel-indicators');
-        
+
         let currentIndex = 0;
         let cardsPerView = 3;
         
@@ -2350,15 +2555,6 @@
             }
         }
         
-        // Event listeners
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
-        });
-        
-        prevBtn.addEventListener('click', () => {
-            prevSlide();
-        });
-        
         // Suporte para swipe em dispositivos móveis
         let touchStartX = 0;
         let touchEndX = 0;
@@ -2414,18 +2610,7 @@
         carousel.addEventListener('touchend', () => {
             setTimeout(startAutoplay, 3000);
         });
-        
-        // Reiniciar autoplay após navegação manual
-        prevBtn.addEventListener('click', () => {
-            stopAutoplay();
-            setTimeout(startAutoplay, 3000);
-        });
-        
-        nextBtn.addEventListener('click', () => {
-            stopAutoplay();
-            setTimeout(startAutoplay, 3000);
-        });
-        
+
         // Inicializar
         updateCardsPerView();
         createIndicators();
