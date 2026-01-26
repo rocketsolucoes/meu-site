@@ -1121,6 +1121,217 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* Seção Depoimentos */
+        .testimonials-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Carrossel de Testimonials */
+        .testimonials-carousel-wrapper {
+            position: relative;
+            max-width: 1400px;
+            margin: 50px auto 0;
+            padding: 0 60px 20px;
+            min-height: 350px;
+        }
+
+        .testimonials-carousel {
+            display: flex;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            gap: 30px;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+        }
+
+        .testimonial-card-carousel {
+            flex: 0 0 calc(25% - 22.5px);
+            width: calc(25% - 22.5px);
+            max-width: calc(25% - 22.5px);
+            min-height: 240px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 20px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testimonial-card-carousel:hover {
+            transform: translateY(-3px);
+            border-color: rgba(16, 185, 129, 0.4);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.08));
+            z-index: 10;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            background: rgba(16, 185, 129, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .testimonial-info {
+            flex: 1;
+        }
+
+        .testimonial-email {
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-rating {
+            color: #10b981;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-comment {
+            color: #d1d5db;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-verified {
+            color: #10b981;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .testimonial-date {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        /* Botões do Carrossel */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #10b981, #059669);
+            border: none;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .carousel-btn:hover {
+            background: linear-gradient(135deg, #059669, #047857);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .carousel-btn-prev {
+            left: 0;
+        }
+
+        .carousel-btn-next {
+            right: 0;
+        }
+
+        /* Indicadores */
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .carousel-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicator.active {
+            background: #10b981;
+            width: 30px;
+            border-radius: 5px;
+        }
+
+        /* Responsivo Testimonials */
+        @media (max-width: 1024px) {
+            .testimonial-card-carousel {
+                flex: 0 0 calc(50% - 15px);
+                width: calc(50% - 15px);
+                max-width: calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-carousel-wrapper {
+                padding: 0 50px;
+            }
+            
+            .testimonial-card-carousel {
+                flex: 0 0 100%;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-carousel-wrapper {
+                padding: 0 40px;
+            }
+            
+            .carousel-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1736,6 +1947,216 @@
         </div>
     </section>
 
+    <!-- SECAO: DEPOIMENTOS -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-icon">&#11088;</div>
+            <h2 class="section-title">O que nossos usuários dizem</h2>
+            <div class="testimonials-carousel-wrapper">
+                <div class="testimonials-carousel">
+                    <!-- Avaliação 1 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">r***o@gmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Sempre compro com a rocket e o atendimento é rápido e excelente."</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">Hoje</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 2 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">g***s@hotmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Já compro chatgpt a tempos e agora a lovable. Vale muito a pena comprar com esta equipe."</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">5 Jan</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 3 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">h***s@gmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Muito bom os produtos e funcionam perfeitamente."</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">19 Dez</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 4 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">l***l@gmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Sem dúvida o melhor."</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">18 Dez</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 5 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">c***a@gmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Estou aprendendo a usar o Capcut graças a oportunidade de comprar por um valor acessível com a Rocket Soluções, equipe nota 10!"</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">17 Dez</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 6 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">V***1@gmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Um dos melhores suportes e muito rápido."</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">16 Dez</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 7 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">m***8@gmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Conta funcionando perfeitamente desde maio/2025. Suporte rápido 👏"</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">16 Dez</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 8 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">g***a@hotmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Deu tudo certo. Não tive problemas até o momento. Usando muito."</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">16 Dez</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 9 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">v***s@gmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"100% eficiente... funciona e agiliza nossa vida..."</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">16 Dez</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 10 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">c***t@gmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Compramos vários e suporte sempre TOP!!! Recomdo!!!"</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">16 Dez</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 11 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">e***o@gmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Muito bom! Voltarei a comprar."</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">16 Dez</span>
+                        </div>
+                    </div>
+
+                    <!-- Avaliação 12 -->
+                    <div class="testimonial-card-carousel">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👤</div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-email">t***o@gmail.com</div>
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-comment">"Ótimo suporte e produtos de qualidade."</p>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-verified">✓ Cliente Verificado</span>
+                            <span class="testimonial-date">16 Dez</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles do carrossel -->
+                <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">‹</button>
+                <button class="carousel-btn carousel-btn-next" aria-label="Próximo">›</button>
+                
+                <!-- Indicadores -->
+                <div class="carousel-indicators"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- SECAO: CTA FINAL -->
     <section class="cta-final-section">
         <div class="container">
@@ -1852,6 +2273,172 @@
                 });
             }
         });
+
+        // Carrossel de Depoimentos
+        const carousel = document.querySelector('.testimonials-carousel');
+        const cards = document.querySelectorAll('.testimonial-card-carousel');
+        const prevBtn = document.querySelector('.carousel-btn-prev');
+        const nextBtn = document.querySelector('.carousel-btn-next');
+        const indicatorsContainer = document.querySelector('.carousel-indicators');
+        
+        let currentIndex = 0;
+        let cardsPerView = 3;
+        
+        // Calcular quantos cards mostrar por vez baseado na largura da tela
+        function updateCardsPerView() {
+            if (window.innerWidth <= 768) {
+                cardsPerView = 1;
+            } else if (window.innerWidth <= 1024) {
+                cardsPerView = 2;
+            } else {
+                cardsPerView = 4;
+            }
+        }
+        
+        // Criar indicadores
+        function createIndicators() {
+            indicatorsContainer.innerHTML = '';
+            const totalSlides = Math.ceil(cards.length / cardsPerView);
+            
+            for (let i = 0; i < totalSlides; i++) {
+                const indicator = document.createElement('div');
+                indicator.classList.add('carousel-indicator');
+                if (i === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => goToSlide(i));
+                indicatorsContainer.appendChild(indicator);
+            }
+        }
+        
+        // Atualizar indicadores
+        function updateIndicators() {
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        // Ir para um slide específico
+        function goToSlide(index) {
+            const totalSlides = Math.ceil(cards.length / cardsPerView);
+            currentIndex = Math.max(0, Math.min(index, totalSlides - 1));
+            
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            const carouselStyles = window.getComputedStyle(carousel);
+            const gap = parseFloat(carouselStyles.gap) || 0;
+            
+            const cardsToSkip = currentIndex * cardsPerView;
+            const offset = cardsToSkip * (cardWidth + gap);
+            
+            carousel.style.transform = `translateX(-${offset}px)`;
+            updateIndicators();
+        }
+        
+        // Próximo slide
+        function nextSlide() {
+            const totalSlides = Math.ceil(cards.length / cardsPerView);
+            if (currentIndex < totalSlides - 1) {
+                goToSlide(currentIndex + 1);
+            } else {
+                goToSlide(0);
+            }
+        }
+        
+        // Slide anterior
+        function prevSlide() {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            } else {
+                const totalSlides = Math.ceil(cards.length / cardsPerView);
+                goToSlide(totalSlides - 1);
+            }
+        }
+        
+        // Event listeners
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+        });
+        
+        // Suporte para swipe em dispositivos móveis
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                prevSlide();
+            }
+        }
+        
+        // Atualizar ao redimensionar a janela
+        window.addEventListener('resize', () => {
+            updateCardsPerView();
+            createIndicators();
+            goToSlide(currentIndex);
+        });
+        
+        // Autoplay
+        let autoplayInterval;
+        const autoplayDelay = 5000;
+        
+        function startAutoplay() {
+            stopAutoplay();
+            autoplayInterval = setInterval(() => {
+                nextSlide();
+            }, autoplayDelay);
+        }
+        
+        function stopAutoplay() {
+            if (autoplayInterval) {
+                clearInterval(autoplayInterval);
+            }
+        }
+        
+        // Pausar autoplay ao passar o mouse
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+        
+        // Pausar autoplay ao tocar (mobile)
+        carousel.addEventListener('touchstart', stopAutoplay);
+        carousel.addEventListener('touchend', () => {
+            setTimeout(startAutoplay, 3000);
+        });
+        
+        // Reiniciar autoplay após navegação manual
+        prevBtn.addEventListener('click', () => {
+            stopAutoplay();
+            setTimeout(startAutoplay, 3000);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            stopAutoplay();
+            setTimeout(startAutoplay, 3000);
+        });
+        
+        // Inicializar
+        updateCardsPerView();
+        createIndicators();
+        currentIndex = 0;
+        carousel.style.transform = 'translateX(0px)';
+        
+        setTimeout(() => {
+            goToSlide(0);
+            startAutoplay();
+        }, 100);
     </script>
 
     <!-- Modal de Planos de Assinatura -->
