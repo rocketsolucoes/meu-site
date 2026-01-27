@@ -2416,11 +2416,21 @@
 
     <!-- Scripts -->
     <script>
-        // FAQ Accordion
+        // Função auxiliar para enviar eventos ao GA4 via dataLayer
+        function sendGA4Event(eventName, eventParams = {}) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': eventName,
+                ...eventParams
+            });
+        }
+
+        // FAQ Accordion com rastreamento GA4
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const item = button.parentElement;
                 const isActive = item.classList.contains('active');
+                const questionText = button.textContent.trim();
 
                 // Fecha todos os outros
                 document.querySelectorAll('.faq-item').forEach(faq => {
@@ -2430,6 +2440,11 @@
                 // Abre o clicado (se nãoestava ativo)
                 if (!isActive) {
                     item.classList.add('active');
+                    // Envia evento ao GA4
+                    sendGA4Event('faq_click', {
+                        'faq_question': questionText,
+                        'page_location': window.location.href
+                    });
                 }
             });
         });
@@ -2446,6 +2461,52 @@
                     });
                 }
             });
+        });
+
+        // Rastreamento de cliques em botões CTA
+        document.addEventListener('DOMContentLoaded', function() {
+            // Rastrear cliques nos botões CTA principais
+            document.querySelectorAll('.cta-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const buttonText = this.textContent.trim();
+                    const buttonHref = this.getAttribute('href');
+                    sendGA4Event('cta_click', {
+                        'button_text': buttonText,
+                        'button_location': buttonHref,
+                        'page_location': window.location.href
+                    });
+                });
+            });
+
+            // Rastrear cliques nos planos de preços
+            document.querySelectorAll('.pricing-plan-cta').forEach(button => {
+                button.addEventListener('click', function() {
+                    const planCard = this.closest('.pricing-plan-card');
+                    const planName = planCard ? planCard.querySelector('.pricing-plan-name')?.textContent.trim() : 'Desconhecido';
+                    const planPrice = planCard ? planCard.querySelector('.pricing-amount')?.textContent.trim() : 'Desconhecido';
+                    const buttonHref = this.getAttribute('href');
+                    
+                    sendGA4Event('plan_click', {
+                        'plan_name': planName,
+                        'plan_price': planPrice,
+                        'button_url': buttonHref,
+                        'page_location': window.location.href
+                    });
+                });
+            });
+
+            // Rastrear clique no botão flutuante do WhatsApp
+            const whatsappButton = document.querySelector('.whatsapp-btn');
+            if (whatsappButton) {
+                whatsappButton.addEventListener('click', function() {
+                    const whatsappUrl = this.getAttribute('href');
+                    sendGA4Event('whatsapp_click', {
+                        'button_location': 'floating_button',
+                        'whatsapp_url': whatsappUrl,
+                        'page_location': window.location.href
+                    });
+                });
+            }
         });
 
         // UTM Tracker
