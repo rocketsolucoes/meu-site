@@ -1175,20 +1175,18 @@
             position: relative;
             max-width: 1400px;
             margin: 50px auto 0;
-            padding: 20px 60px 20px;
+            padding: 20px 60px 30px;
             min-height: 350px;
-            overflow: visible;
+            overflow: hidden;
         }
 
         .testimonials-carousel {
             display: flex;
-            overflow: hidden;
+            overflow: visible;
             scroll-behavior: smooth;
             gap: 30px;
             transition: transform 0.5s ease-in-out;
             will-change: transform;
-            padding: 10px 0;
-            margin: -10px 0;
         }
 
         .testimonial-card-carousel {
@@ -1210,7 +1208,7 @@
         }
 
         .testimonial-card-carousel:hover {
-            transform: translateY(-3px);
+            transform: scale(1.02);
             border-color: rgba(16, 185, 129, 0.4);
             box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.08));
