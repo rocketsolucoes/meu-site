@@ -2528,7 +2528,7 @@
             const queryString = capturedParams.toString();
 
             if (queryString) {
-                const checkoutLinks = document.querySelectorAll('a[href*="payment.solucoesrocket.com.br"], a[href*="kirvano.com"]');
+                const checkoutLinks = document.querySelectorAll('a[href*="payment.solucoesrocket.com.br"]');
                 checkoutLinks.forEach(link => {
                     const originalHref = link.href;
                     const separator = originalHref.includes('?') ? '&' : '?';
