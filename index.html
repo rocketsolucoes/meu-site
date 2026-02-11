@@ -960,9 +960,9 @@
 
             const queryString = capturedParams.toString();
 
-            // Se houver parâmetros, anexa aos links do Kirvano
+            // Se houver parâmetros, anexa aos links de checkout
             if (queryString) {
-                const checkoutLinks = document.querySelectorAll('a[href*="kirvano.com"]');
+                const checkoutLinks = document.querySelectorAll('a[href*="payment.solucoesrocket.com.br"]');
 
                 checkoutLinks.forEach(link => {
                     const originalHref = link.href;
