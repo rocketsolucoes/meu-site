@@ -74,17 +74,6 @@ function observeElements() {
 // Inicializa as animações quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', observeElements);
 
-// Efeito parallax sutil no hero
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    
-    if (hero) {
-        const speed = scrolled * 0.5;
-        hero.style.transform = `translateY(${speed}px)`;
-    }
-});
-
 // Adiciona classe para melhorar a performance das animações
 document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('loaded');
