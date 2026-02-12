@@ -57,13 +57,146 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-    <!-- Preload CSS crítico -->
-    <link rel="preload" href="styles.min.css" as="style">
-    <link rel="stylesheet" href="styles.min.css">
+    <!-- CSS Crítico Inline (LCP Optimization) -->
+    <style>
+/* Reset */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <!-- Modal de Assinatura -->
-    <link rel="stylesheet" href="subscription-modal.css">
-    
+/* Body */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    padding-top: 45px;
+    background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #2d3748 100%);
+    z-index: 1001;
+    padding: 6px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promo-banner {
+    width: 100%;
+    text-align: center;
+}
+
+.promo-text {
+    font-size: 0.8rem;
+    color: #ff6b35;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 4px 12px;
+    border-radius: 25px;
+    border: 1px solid #ff6b35;
+    display: inline-block;
+}
+
+/* Hero (LCP Element) */
+.hero {
+    padding: 100px 0 140px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    margin-bottom: 24px;
+    color: #e5e7eb;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+}
+
+.hero-cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.badge {
+    background: rgba(255, 107, 53, 0.1);
+    color: #ff6b35;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.highlight-animated {
+    color: #ff6b35;
+}
+
+@media (max-width: 768px) {
+    .hero { padding: 60px 0 80px; }
+    .hero-title { font-size: 2rem; }
+    .hero-cta-button { padding: 14px 28px; font-size: 1rem; }
+}
+    </style>
+
+    <!-- Carregar CSS completo assincronamente -->
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+
+    <!-- Subscription Modal CSS assíncrono -->
+    <link rel="preload" href="subscription-modal.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="subscription-modal.css"></noscript>
+
     <!-- Preconnect para fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
